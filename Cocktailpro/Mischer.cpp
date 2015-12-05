@@ -4,6 +4,14 @@
 
 
 #include "Mischer.h"
+
+Mischer::Mischer(){
+    
+}
+
+Mischer::~Mischer(){
+    
+}
 /**
  * 
  */

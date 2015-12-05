@@ -5,6 +5,13 @@
 
 #include "Waage.h"
 
+Waage::Waage(){
+    
+}
+
+Waage::~Waage(){
+    
+}
 /**
  * 
  */

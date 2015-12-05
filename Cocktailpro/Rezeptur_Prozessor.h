@@ -18,6 +18,8 @@ class Rezeptur_Prozessor
 {
 	
 public:
+        Rezeptur_Prozessor();
+        virtual ~Rezeptur_Prozessor();
 	/**
 	 * 
 	 * */

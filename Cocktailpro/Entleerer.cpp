@@ -4,6 +4,14 @@
 
 
 #include "Entleerer.h"
+
+Entleerer::Entleerer(){
+    
+}
+
+Entleerer::~Entleerer(){
+    
+}
 /**
  * 
  * */

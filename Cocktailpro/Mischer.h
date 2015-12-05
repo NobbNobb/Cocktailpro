@@ -12,6 +12,8 @@ class Mischer
 {
 	
 public:
+        Mischer();
+        virtual ~Mischer();
 	/**
 	 * 
 	 * */

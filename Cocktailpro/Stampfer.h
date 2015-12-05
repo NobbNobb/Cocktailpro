@@ -12,6 +12,8 @@ class Stampfer
 {
 	
 public:
+        Stampfer();
+        virtual ~Stampfer();
 	/**
 	 * 
 	 * */

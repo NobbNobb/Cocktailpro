@@ -23,6 +23,9 @@ class Waage//: public Subject
 	 */
 	int deltaGewicht;
 	public:
+            
+        Waage();
+        virtual ~Waage();
 	
 	/**
 	 * 

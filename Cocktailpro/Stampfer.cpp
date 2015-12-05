@@ -4,6 +4,15 @@
 
 
 #include "Stampfer.h"
+
+Stampfer::Stampfer(){
+    
+}
+
+Stampfer::~Stampfer(){
+    
+}
+
 /**
  * 
  * */

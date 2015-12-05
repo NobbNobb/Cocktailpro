@@ -4,6 +4,14 @@
 
 
 #include "Rezeptur_Prozessor.h"
+
+Rezeptur_Prozessor::Rezeptur_Prozessor(){
+    
+}
+
+Rezeptur_Prozessor::~Rezeptur_Prozessor(){
+    
+}
 /**
  * 
  * */

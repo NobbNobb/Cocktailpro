@@ -4,6 +4,14 @@
 
 
 #include "Dosierer.h"
+
+Dosierer::Dosierer(){
+    
+}
+
+Dosierer::~Dosierer(){
+    
+}
 /**
  * 
  * */

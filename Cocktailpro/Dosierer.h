@@ -19,7 +19,10 @@ using namespace std;
 class Dosierer//: public Observer
 {
 	public:
-	
+            
+            
+        Dosierer();
+        virtual ~Dosierer();
 	/**
 	 * 
 	 * */
