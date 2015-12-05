@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer_Verwaltung.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Entleerer.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/GUI.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Gefilltertes_Rezeptbuch.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Mischer.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptbuch.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptur_Prozessor.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer_Verwaltung.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Entleerer.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/GUI.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Gefilltertes_Rezeptbuch.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Mischer.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptur_Prozessor.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptbuch_g++_CASE_Ubuntu.o</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer_Verwaltung.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer_Verwaltung.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Entleerer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Entleerer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/GUI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/GUI.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Gefilltertes_Rezeptbuch.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Gefilltertes_Rezeptbuch.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Mischer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Mischer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptbuch.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptur_Prozessor.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptur_Prozessor.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer_Verwaltung.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Dosierer_Verwaltung.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Entleerer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Entleerer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/GUI.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/GUI.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Gefilltertes_Rezeptbuch.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Gefilltertes_Rezeptbuch.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Mischer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Mischer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptbuch.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptur_Prozessor.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptur_Prozessor.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
