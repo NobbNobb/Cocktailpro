@@ -5,12 +5,12 @@
 #ifndef ENTLEERER_H_H
 #define ENTLEERER_H_H
 
-//#include "Observer.h"
+#include "Observer.h"
 #include "Waage.h"
 /**
  * Der Entleerer entleert den Behälter und reinigt diesen anschliesend
  * */
-class Entleerer//: Observer
+class Entleerer: public Observer
 {
 	
 public:

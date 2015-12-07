@@ -7,7 +7,7 @@
 
 #endif
 #include <string>
-//#include "Observer.h"
+#include "Observer.h"
 #include "string.h"
 #include "Waage.h"
 
@@ -16,7 +16,7 @@ using namespace std;
 /**
  * Die Dosierer legen die Mischbaren Rezepte fest. Es gibt zwei Arten von Dosierer (Stückdosierer und Ventildosierer). Die Dosierung wird durch die Waage kontrolliert.
  * */
-class Dosierer//: public Observer
+class Dosierer: public Observer
 {
 	public:
             

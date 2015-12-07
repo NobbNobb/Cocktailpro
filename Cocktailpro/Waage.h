@@ -5,11 +5,11 @@
 #ifndef WAAGE_H_H
 #define WAAGE_H_H
 
-//#include "Subject.h"
+#include "Subject.h"
 /**
  * Die Waage kontroliert das Gewicht des zu befüllenden Behälters während des ganzen Mischvorganges.Überprüft das Absolute Gewicht und den Delta-Nullpunkt
  * */
-class Waage//: public Subject
+class Waage: public Subject
 {
 	
 

@@ -41,8 +41,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/2117958763/GUI.o \
 	${OBJECTDIR}/_ext/2117958763/Gefilltertes_Rezeptbuch.o \
 	${OBJECTDIR}/_ext/2117958763/Mischer.o \
+	${OBJECTDIR}/_ext/2117958763/Observer.o \
 	${OBJECTDIR}/_ext/2117958763/Rezeptur_Prozessor.o \
 	${OBJECTDIR}/_ext/2117958763/Stampfer.o \
+	${OBJECTDIR}/_ext/2117958763/Subject.o \
 	${OBJECTDIR}/_ext/2117958763/Waage.o \
 	${OBJECTDIR}/main.o
 
@@ -103,6 +105,11 @@ ${OBJECTDIR}/_ext/2117958763/Mischer.o: /home/fs/NetBeansProjects/Cocktailpro/Co
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/2117958763/Mischer.o /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Mischer.cpp
 
+${OBJECTDIR}/_ext/2117958763/Observer.o: /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Observer.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/2117958763
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/2117958763/Observer.o /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Observer.cpp
+
 ${OBJECTDIR}/_ext/2117958763/Rezeptur_Prozessor.o: /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptur_Prozessor.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/2117958763
 	${RM} "$@.d"
@@ -112,6 +119,11 @@ ${OBJECTDIR}/_ext/2117958763/Stampfer.o: /home/fs/NetBeansProjects/Cocktailpro/C
 	${MKDIR} -p ${OBJECTDIR}/_ext/2117958763
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/2117958763/Stampfer.o /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.cpp
+
+${OBJECTDIR}/_ext/2117958763/Subject.o: /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/2117958763
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/2117958763/Subject.o /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.cpp
 
 ${OBJECTDIR}/_ext/2117958763/Waage.o: /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/2117958763

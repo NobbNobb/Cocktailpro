@@ -10,9 +10,11 @@
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/GUI.h</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Gefilltertes_Rezeptbuch.h</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Mischer.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Observer.h</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptbuch.h</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptur_Prozessor.h</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.h</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -28,8 +30,10 @@
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/GUI.cpp</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Gefilltertes_Rezeptbuch.cpp</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Mischer.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Observer.cpp</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptur_Prozessor.cpp</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.cpp</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -120,6 +124,16 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Observer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Observer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptbuch.h"
             ex="false"
             tool="3"
@@ -141,6 +155,16 @@
             flavor2="0">
       </item>
       <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -238,6 +262,16 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Observer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Observer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Rezeptbuch.h"
             ex="false"
             tool="3"
@@ -259,6 +293,16 @@
             flavor2="0">
       </item>
       <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.h"
             ex="false"
             tool="3"
             flavor2="0">
