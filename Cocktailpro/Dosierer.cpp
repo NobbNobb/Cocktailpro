@@ -9,6 +9,11 @@ Dosierer::Dosierer(){
     
 }
 
+Dosierer::Dosierer(string zutat){
+    Zutat = zutat;
+    Zustand = false;
+}
+
 Dosierer::~Dosierer(){
     
 }
@@ -49,6 +54,10 @@ void Dosierer::update()
 void Dosierer::setZustand(bool zustand)
 {
 	Zustand=zustand;
+}
+
+void Dosierer::setSubject(Waage* waage){
+    subject = waage;
 }
 
 /**

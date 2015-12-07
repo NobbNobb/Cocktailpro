@@ -19,7 +19,7 @@ class Rezeptur_Prozessor
 	
 public:
         Rezeptur_Prozessor();
-        Rezeptur_Prozessor(Dosierer_Verwaltung dVerwaltung);
+        Rezeptur_Prozessor(Dosierer_Verwaltung *dVerwaltung);
         virtual ~Rezeptur_Prozessor();
 	/**
 	 * 
@@ -30,7 +30,7 @@ private:
 	/**
 	 * 
 	 * */
-	Dosierer_Verwaltung * m_Doosierer_Verw;
+	Dosierer_Verwaltung * m_Dosierer_Verw;
 	
 	/**
 	 * 

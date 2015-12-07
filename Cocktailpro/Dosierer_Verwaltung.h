@@ -32,30 +32,23 @@ public:
 	/**
 	 * 
 	 * */
-	Dosierer getM_Dosierer() const;
+	vector<Dosierer*> getM_Dosierer() const;
 	/**
 	 * 
 	 * */
 	std::vector<std::string> getZutaten() const;
-	/**
-	 * 
-	 * */
-	void setM_Dosierer(Dosierer m_Dosierer);
-	/**
-	 * 
-	 */
-//	void setZutaten(vector<string> zutaten);
+
 	
 private:
 	/**
 	 * 
 	 * */
-	Dosierer m_Dosierer;
+	vector<Dosierer*> m_Dosierer;
 	
 	/**
 	 * 
 	 * */
-	std::vector<std::string> Zutaten;
+	vector<string> Zutaten;
 	
 	
 };

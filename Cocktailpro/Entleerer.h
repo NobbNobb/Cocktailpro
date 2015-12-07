@@ -15,6 +15,7 @@ class Entleerer//: Observer
 	
 public:
         Entleerer();
+        Entleerer(Waage *waage);
         virtual ~Entleerer();
 	/**
 	 * 

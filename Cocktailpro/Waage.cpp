@@ -6,7 +6,8 @@
 #include "Waage.h"
 
 Waage::Waage(){
-    
+    Gewicht = 0;
+    deltaGewicht = 0;
 }
 
 Waage::~Waage(){

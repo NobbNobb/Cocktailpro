@@ -22,6 +22,7 @@ class Dosierer//: public Observer
             
             
         Dosierer();
+        Dosierer(string zutat);
         virtual ~Dosierer();
 	/**
 	 * 
@@ -42,6 +43,8 @@ class Dosierer//: public Observer
 	 * 
 	 * */
 	void setZutat(std::string zutat);
+        
+        void setSubject(Waage *waage);
 	
 	/**
 	 * 

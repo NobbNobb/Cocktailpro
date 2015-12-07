@@ -9,6 +9,11 @@ Entleerer::Entleerer(){
     
 }
 
+Entleerer::Entleerer(Waage *waage){
+    subject = waage;
+    Zustand = false;
+}
+
 Entleerer::~Entleerer(){
     
 }

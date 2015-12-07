@@ -16,22 +16,12 @@ using namespace std;
 Dosierer_Verwaltung::Dosierer_Verwaltung(){
 }
 
-Dosierer_Verwaltung::setM_Dosierer(Dosierer m_Dosierer){
-    
-}
 /**
  * 
  */
 Dosierer_Verwaltung::~Dosierer_Verwaltung(){
 }
 
-/**
- * 
- * */
-void Dosierer_Verwaltung::setM_Dosierer(Dosierer m_Dosierer)
-{
-	this->m_Dosierer=m_Dosierer;
-}
 
 /**
  * 
@@ -49,6 +39,8 @@ void Dosierer_Verwaltung::dateiLaden()
     while(!load.eof()){
         getline(load, word);
         Zutaten.push_back(word);
+        Dosierer* dosierer = new Dosierer(word);
+        m_Dosierer.push_back(dosierer);
     }
     load.close();
     cout << "Zutaten wurden erfolgreich geladen" << endl;
@@ -62,18 +54,11 @@ std::vector<std::string> Dosierer_Verwaltung::getZutaten() const
 	return Zutaten;
 }
 
-/**
- * 
- */
-//void Dosierer_Verwaltung::setZutaten(vector<string> zutaten)
-//{
-//	Zutaten=zutaten;
-//}
 
 /**
  * 
  * */
-Dosierer Dosierer_Verwaltung::getM_Dosierer() const
+vector<Dosierer*> Dosierer_Verwaltung::getM_Dosierer() const
 {
 	return m_Dosierer;
 }
