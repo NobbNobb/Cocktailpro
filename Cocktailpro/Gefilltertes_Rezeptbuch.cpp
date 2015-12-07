@@ -20,14 +20,6 @@ Gefilltertes_Rezeptbuch::~Gefilltertes_Rezeptbuch(){
 /**
  * 
  * */
-bool Gefilltertes_Rezeptbuch::bereite_zu(int cocktail)
-{
-	
-}
-
-/**
- * 
- * */
 void Gefilltertes_Rezeptbuch::filtern(std::vector<std::string> zutaten)
 {
     Rezept* rezept;

@@ -31,10 +31,6 @@ public:
 	/**
 	 * 
 	 * */
-	bool bereite_zu(int cocktail);
-	/**
-	 * 
-	 * */
 	void filtern(std::vector<std::string> zutaten);
 	
 private:

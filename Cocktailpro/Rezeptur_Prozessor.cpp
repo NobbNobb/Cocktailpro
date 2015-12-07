@@ -34,7 +34,7 @@ Rezeptur_Prozessor::~Rezeptur_Prozessor(){
 /**
  * 
  * */
-bool Rezeptur_Prozessor::add_Zutat(std::string zutat, int anzahl)
+void Rezeptur_Prozessor::bereite_zu(Rezept* rezept)
 {
 	
 }

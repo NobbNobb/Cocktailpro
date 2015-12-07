@@ -11,6 +11,7 @@
 #include "Waage.h"
 #include "Dosierer_Verwaltung.h"
 #include "string.h"
+#include "Gefilltertes_Rezeptbuch.h"
 /**
  * Führt falls notwendig koordinierende Tätigkeiten aus. Dient als Schnittstelle zwischen Rezeptbuch und dem Cocktailmischer
  * */
@@ -24,7 +25,7 @@ public:
 	/**
 	 * 
 	 * */
-	bool add_Zutat(std::string zutat, int anzahl);
+	void bereite_zu(Rezept* rezept);
 	
 private:
 	/**
