@@ -50,3 +50,7 @@ void GUI::printCocktails()
     }
 }
 
+void GUI::Menue(){
+    
+}
+

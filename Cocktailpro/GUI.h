@@ -31,6 +31,8 @@ public:
 	 * 
 	 * */
 	void printCocktails();
+        
+        void Menue();
 	
 private:
 	/**
