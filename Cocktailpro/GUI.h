@@ -32,7 +32,7 @@ public:
 	 * */
 	void printCocktails();
         
-        void Menue();
+        void menue();
 	
 private:
 	/**
