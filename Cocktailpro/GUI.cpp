@@ -69,7 +69,7 @@ void GUI::menue(){
                 printCocktails();
                 break;
             case 2:
-                cout << "Noch nicht implementiert" << endl;
+                cocktailAuswahl();
                 break;
             case 3:
                 cout << "Noch nicht implementiert" << endl;
@@ -85,5 +85,22 @@ void GUI::menue(){
         }
     }    
     
+}
+
+void GUI::cocktailAuswahl(){
+    string eingabe;
+    int zahl = 0;
+    while(!zahl){
+        cout << "Bitte Cocktail auswählen: ";
+        getline(cin, eingabe);
+        zahl = atoi(eingabe.c_str());
+        if(0 < zahl && zahl < m_Rezepte->getAnzahlRezepte()){
+            //TODO Beerbeitungsfunktion erstellen und hinzufügen
+        }
+        else{
+            cout << "Falsche Eingabe! Bitte erneut eignaben" << endl;
+            zahl = 0;
+        }
+    }
 }
 

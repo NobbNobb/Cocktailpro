@@ -33,6 +33,8 @@ public:
 	void printCocktails();
         
         void menue();
+        
+        void cocktailAuswahl();
 	
 private:
 	/**
