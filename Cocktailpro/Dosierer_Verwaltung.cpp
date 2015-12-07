@@ -15,6 +15,10 @@ using namespace std;
  */
 Dosierer_Verwaltung::Dosierer_Verwaltung(){
 }
+
+Dosierer_Verwaltung::setM_Dosierer(Dosierer m_Dosierer){
+    
+}
 /**
  * 
  */
