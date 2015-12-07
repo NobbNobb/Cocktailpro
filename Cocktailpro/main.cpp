@@ -16,6 +16,7 @@ int main(int argc, char** argv) {
     cout << "CocktailPro Alpha v0.2"<<endl;
     GUI ctp;
     ctp.init();
+    cout << "Test Tobi"<<endl;
     ctp.menue();
     return 0;
 }
