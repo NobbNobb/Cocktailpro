@@ -17,7 +17,7 @@ public:
 	/**
 	 * 
 	 * */
-	void mischen(int zeit);
+	void mischen(float zeit);
 	
 };
 

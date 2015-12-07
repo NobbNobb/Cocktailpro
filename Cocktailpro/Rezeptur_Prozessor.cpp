@@ -36,6 +36,20 @@ Rezeptur_Prozessor::~Rezeptur_Prozessor(){
  * */
 void Rezeptur_Prozessor::bereite_zu(Rezept* rezept)
 {
-	
+    for(int i = 0; i < rezept->getAnzahlRezeptschritte(); i++){
+        Rezeptschritt* rSchritt = rezept->getRezeptSchritt(i);
+        if(rSchritt->getZutat() == "Mischen"){
+            cout << "Hier würde jetzt für " << rSchritt->getMenge() << "sec gemischt werden" << endl;
+            m_Mischer->mischen(rSchritt->getMenge());
+        }
+        else if(rSchritt->getZutat() == "Stampfen"){
+            cout << "Hier würde jetzt für " << rSchritt->getMenge() << "sec gestampft werden" << endl;
+            m_Stampfer->stampfen(rSchritt->getMenge());
+        }
+        else{
+            cout << "Hier würden jetzt " << rSchritt->getMenge() << "g an " << rSchritt->getZutat() << " dosiert werden" << endl;
+            //TODO implementieren der Dosierung
+        }
+    }
 }
 

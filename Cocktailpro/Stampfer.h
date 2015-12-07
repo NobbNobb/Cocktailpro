@@ -17,7 +17,7 @@ public:
 	/**
 	 * 
 	 * */
-	void stampfen(int zeit);
+	void stampfen(float zeit);
 	
 };
 

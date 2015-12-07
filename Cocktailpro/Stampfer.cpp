@@ -16,7 +16,7 @@ Stampfer::~Stampfer(){
 /**
  * 
  * */
-void Stampfer::stampfen(int zeit)
+void Stampfer::stampfen(float zeit)
 {
 	
 }

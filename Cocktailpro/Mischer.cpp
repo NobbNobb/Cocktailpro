@@ -15,7 +15,7 @@ Mischer::~Mischer(){
 /**
  * 
  */
-void Mischer::mischen(int zeit)
+void Mischer::mischen(float zeit)
 {
 	
 }

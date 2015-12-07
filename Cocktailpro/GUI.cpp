@@ -95,7 +95,7 @@ void GUI::cocktailAuswahl(){
         getline(cin, eingabe);
         zahl = atoi(eingabe.c_str());
         if(0 < zahl && zahl < m_Rezepte->getAnzahlRezepte()){
-            //TODO Beerbeitungsfunktion erstellen und hinzufügen
+            m_Rezeptur_Prozessor->bereite_zu(m_Rezepte->getRezept(zahl-1));
         }
         else{
             cout << "Falsche Eingabe! Bitte erneut eignaben" << endl;
