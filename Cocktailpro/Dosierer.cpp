@@ -25,21 +25,6 @@ std::string Dosierer::getZutat() const
 	return Zutat;
 }
 
-
-
-
-/**
- * 
- * */
-void Dosierer::setZutat(std::string zutat)
-{
-	Zutat=zutat;
-}
-
-
-
-
-
 /**
  * 
  */
@@ -63,7 +48,7 @@ void Dosierer::setSubject(Waage* waage){
 /**
  * 
  */
-bool Dosierer::isZustand() const
+bool Dosierer::getZustand() const
 {
 	return Zustand;
 }

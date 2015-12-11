@@ -27,22 +27,18 @@ class Dosierer: public Observer
 	/**
 	 * 
 	 * */
-	std::string getZutat() const;
+	string getZutat() const;
 	
 	/**
 	 * 
 	 */
-	bool isZustand() const;
+	bool getZustand() const;
 	
 	/**
 	 * 
 	 */
 	void setZustand(bool zustand);
 	
-	/**
-	 * 
-	 * */
-	void setZutat(std::string zutat);
         
         void setSubject(Waage *waage);
 	
