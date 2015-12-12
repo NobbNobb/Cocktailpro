@@ -42,6 +42,7 @@ public:
 	 * 
 	 */
 	bool Zustand;
+        
 	public:
 	
 	/**
@@ -52,7 +53,7 @@ public:
 	/**
 	 * 
 	 */
-	bool isZustand() const;
+	bool getZustand() const;
 	
 };
 

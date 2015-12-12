@@ -35,6 +35,7 @@ void Dosierer::update()
 {
     if(subject->getDeltaGewicht() >= Durchfluss){
         setZustand(false);
+        cout << "Ventil von Dosierer " << getZutat() << " geschlossen" << endl;
     };
 }
 
@@ -67,6 +68,7 @@ void Dosierer::dosieren(float menge){
     subject->setDeltaGewicht(0);
     subject->attach(this);
     setZustand(true);
+    cout << "Ventil von Dosierer " << getZutat() << " geöffnet" << endl;
     while(getZustand()){
         if(!getTyp()){
             //Stückdosierer
@@ -83,12 +85,13 @@ void Dosierer::dosieren(float menge){
         }
         else{
             //normaler Dosierer
-                cout << "Es werden 1 " << getZutat() << " Limettenstücke dosiert" << endl;
+                cout << "Es werden 1g " << getZutat() << " dosiert" << endl;
                 subject->addGewicht(1);
                 subject->notify();
         }
     }
     subject->detach(this);
+    cout << endl;
 }
 
 void Dosierer::setDurchfluss(float menge){

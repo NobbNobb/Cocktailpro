@@ -4,6 +4,7 @@
 
 
 #include "Entleerer.h"
+#include <iostream>
 
 Entleerer::Entleerer(){
     
@@ -30,7 +31,16 @@ void Entleerer::reinigen()
  * */
 void Entleerer::leeren()
 {
-	
+    subject->setDeltaGewicht(subject->getGewicht());
+    subject->attach(this);
+    setZustand(true);
+    cout << "Entleerventil geöffnet" << endl;
+    while(getZustand()){
+        cout << "Es werden 25g des Cocktails entleert" << endl;
+        subject->addGewicht(-25);
+        subject->notify();
+    }
+    subject->detach(this);
 }
 
 
@@ -39,7 +49,10 @@ void Entleerer::leeren()
  */
 void Entleerer::update()
 {
-	
+	if(subject->getDeltaGewicht() <= 0){
+        setZustand(false);
+        cout << "Entleerventil geschlossen" << endl;
+    };
 }
 
 /**
@@ -53,7 +66,7 @@ void Entleerer::setZustand(bool zustand)
 /**
  * 
  */
-bool Entleerer::isZustand() const
+bool Entleerer::getZustand() const
 {
 	return Zustand;
 }

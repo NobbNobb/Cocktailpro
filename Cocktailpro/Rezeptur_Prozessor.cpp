@@ -54,5 +54,6 @@ void Rezeptur_Prozessor::bereite_zu(Rezept* rezept)
             }
         }
     }
+    m_Entleerer->leeren();
 }
 
