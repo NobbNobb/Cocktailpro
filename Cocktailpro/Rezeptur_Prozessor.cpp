@@ -13,8 +13,8 @@ Rezeptur_Prozessor::Rezeptur_Prozessor(){
 
 Rezeptur_Prozessor::Rezeptur_Prozessor(Dosierer_Verwaltung *dVerwaltung){
     Zeit* zeit = new Zeit();
-    Stampfer* stampfer = new Stampfer();
-    Mischer* mischer = new Mischer();
+    Stampfer* stampfer = new Stampfer(zeit);
+    Mischer* mischer = new Mischer(zeit);
     Waage* waage = new Waage(zeit);
     Entleerer* entleerer = new Entleerer(waage, zeit);
     
@@ -42,11 +42,9 @@ void Rezeptur_Prozessor::bereite_zu(Rezept* rezept)
     for(int i = 0; i < rezept->getAnzahlRezeptschritte(); i++){
         Rezeptschritt* rSchritt = rezept->getRezeptSchritt(i);
         if(rSchritt->getZutat() == "Mischen"){
-            cout << "Hier würde jetzt für " << rSchritt->getMenge() << "sec gemischt werden" << endl;
             m_Mischer->mischen(rSchritt->getMenge());
         }
         else if(rSchritt->getZutat() == "Stampfen"){
-            cout << "Hier würde jetzt für " << rSchritt->getMenge() << "sec gestampft werden" << endl;
             m_Stampfer->stampfen(rSchritt->getMenge());
         }
         else{

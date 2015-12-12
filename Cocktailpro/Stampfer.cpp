@@ -4,9 +4,13 @@
 
 
 #include "Stampfer.h"
+#include <iostream>
 
 Stampfer::Stampfer(){
     
+}
+Stampfer::Stampfer(Zeit* zeit){
+    m_Zeit = zeit;
 }
 
 Stampfer::~Stampfer(){
@@ -18,6 +22,12 @@ Stampfer::~Stampfer(){
  * */
 void Stampfer::stampfen(float zeit)
 {
-	
+    cout << "Cocktail wird gestampft." << endl;
+    for(int i = 0; i < zeit; i++){
+        cout << "*";
+        cout.flush();
+        m_Zeit->sleep(1000);
+    }
+    cout << endl << endl;;
 }
 

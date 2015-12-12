@@ -87,7 +87,7 @@ void Dosierer::dosieren(float menge){
         }
         else{
             //normaler Dosierer
-                cout << "Es werden 1g " << getZutat() << " dosiert" << endl;
+                cout << "Es wird 1g " << getZutat() << " dosiert" << endl;
                 subject->addGewicht(1);
                 subject->notify();
                 subject->getZeit()->sleep(250);

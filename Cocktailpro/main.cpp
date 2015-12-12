@@ -12,7 +12,7 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
-    cout << "CocktailPro Alpha v0.2"<<endl;
+    cout << "CocktailPro Beta v0.7"<<endl;
     GUI ctp;
     ctp.init();
     ctp.menue();
