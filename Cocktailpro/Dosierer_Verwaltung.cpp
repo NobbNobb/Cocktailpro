@@ -13,20 +13,17 @@ Dosierer_Verwaltung::~Dosierer_Verwaltung(){
 
 /*-----------------------Getter-----------------------*/
 
-vector<string> Dosierer_Verwaltung::getZutaten() const
-{
-	return m_Zutaten;
+vector<string> Dosierer_Verwaltung::getZutaten() const{
+    return m_Zutaten;
 }
 
-vector<Dosierer*> Dosierer_Verwaltung::getM_Dosierer() const
-{
-	return m_Dosierer;
+vector<Dosierer*> Dosierer_Verwaltung::getM_Dosierer() const{
+    return m_Dosierer;
 }
 
 /*-----------------------Funktionen-----------------------*/
 
-void Dosierer_Verwaltung::dateiLaden()
-{
+void Dosierer_Verwaltung::dateiLaden(){
     cout << "Starte einlesen der Zutaten..." << endl;
     string word, filename = "zutaten.txt";                 //deklarieren und initialisieren der Variabeln
     ifstream load;                                         //deklarieren des filestreams

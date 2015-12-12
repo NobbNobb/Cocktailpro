@@ -4,82 +4,63 @@
 
 
 #include "Entleerer.h"
-#include <iostream>
-
-Entleerer::Entleerer(){
-    
-}
 
 Entleerer::Entleerer(Waage *waage, Zeit* zeit){
-    subject = waage;
+    m_Subject = waage;
     m_Zeit = zeit;
-    Zustand = false;
+    m_Zustand = false;
 }
 
-Entleerer::~Entleerer(){
-    
-}
-/**
- * 
- * */
-void Entleerer::reinigen()
-{
-    cout << endl << "Cocktailbehälter wird gereinigt. Bitte warten: ";
-    for(int i = 0; i < 10; i++){
-        cout << "*";
-        cout.flush();
-        subject->getZeit()->sleep(1000);
-    }
-    cout << endl;
+Entleerer::~Entleerer(){   
 }
 
-/**
- * 
- * */
-void Entleerer::leeren()
-{
-    subject->setDeltaGewicht(subject->getGewicht());
-    subject->attach(this);
-    setZustand(true);
-    cout << endl << "Entleerventil geöffnet." << endl;
-    subject->showGewicht();
-    while(getZustand()){
-        subject->addGewicht(-25);
-        subject->notify();
-        subject->getZeit()->sleep(1000);
-    }
-    subject->detach(this);
-}
+/*-----------------------Getter-----------------------*/
 
-
-/**
- * 
- */
-void Entleerer::update()
-{
-    subject->showGewicht();
-    if(subject->getDeltaGewicht() <= 0){
-        setZustand(false);
-        cout << "Entleerventil geschlossen." << endl;
-    };
-}
-
-/**
- * 
- */
-void Entleerer::setZustand(bool zustand)
-{
-	Zustand=zustand;
-}
-
-/**
- * 
- */
-bool Entleerer::getZustand() const
-{
-	return Zustand;
+bool Entleerer::getZustand() const{
+    return m_Zustand;
 }
 
 Zeit* Entleerer::getZeit() const{
     return m_Zeit;
 }
+
+/*-----------------------Setter-----------------------*/
+
+void Entleerer::setZustand(bool zustand){
+    m_Zustand=zustand;
+}
+
+/*-----------------------Funktionen-----------------------*/
+
+void Entleerer::reinigen(){
+    cout << endl << "Cocktailbehälter wird gereinigt. Bitte warten: ";
+    for(int i = 0; i < 10; i++){
+        cout << "*";
+        cout.flush();                           //Output erzwingen
+        m_Subject->getZeit()->sleep(1000);        //Eine Sekunde warten
+    }
+    cout << endl;
+}
+
+void Entleerer::leeren(){
+    m_Subject->setDeltaGewicht(m_Subject->getGewicht()); //DeltaGewicht auf Gewicht setzen
+    m_Subject->attach(this);                           //Observer anmelden
+    setZustand(true);                                //Ventil öffnen
+    cout << endl << "Entleerventil geöffnet." << endl;
+    m_Subject->showGewicht();                          //Gewicht ausgeben
+    while(getZustand()){                             //Prüfen ob das Ventil offen ist
+        m_Subject->addGewicht(-25);                    //negatives Gewicht hinzufügen (subGewicht))
+        m_Subject->notify();                           //Alle Observer benachrichtigen
+        m_Subject->getZeit()->sleep(1000);             //Eine Sekunde warten
+    }
+    m_Subject->detach(this);                           //Observer abmelden
+}
+
+void Entleerer::update(){
+    m_Subject->showGewicht();                          //Gewicht ausgeben
+    if(m_Subject->getDeltaGewicht() <= 0){             //Prüfen ob der Behälter leer ist
+        setZustand(false);                           //Ventil schliesen
+        cout << "Entleerventil geschlossen." << endl;
+    };
+}
+

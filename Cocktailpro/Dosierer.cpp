@@ -21,8 +21,7 @@ string Dosierer::getZutat() const{
     return m_Zutat;
 }
 
-bool Dosierer::getZustand() const
-{
+bool Dosierer::getZustand() const{
     return m_Zustand;
 }
 
@@ -36,8 +35,7 @@ void Dosierer::setSubject(Waage* waage){
     m_Subject = waage;
 }
 
-void Dosierer::setZustand(bool zustand)
-{
+void Dosierer::setZustand(bool zustand){
     m_Zustand=zustand;
 }
 
@@ -54,7 +52,7 @@ void Dosierer::dosieren(float menge){
     setZustand(true);                    //Ventil öffnen
     cout << endl << "Ventil von Dosierer \"" << getZutat() << "\" geöffnet." << endl;
     m_Subject->showGewicht();            //Gewicht ausgeben
-    while(getZustand()){                 //Prüfen ob Ventil offen ist
+    while(getZustand()){                 //Prüfen ob das Ventil offen ist
         if(!getTyp()){                   //Prüfen welche Art von Dosierer vohanden ist
             //Stückdosierer
             if(getZutat() == "Limettenstücke"){
@@ -80,8 +78,7 @@ void Dosierer::dosieren(float menge){
     cout << endl;
 }
 
-void Dosierer::update()
-{
+void Dosierer::update(){
     m_Subject->showGewicht();                           //Gewicht ausgeben
     if(m_Subject->getDeltaGewicht() >= m_Durchfluss){   //Prüfen ob die zu dosierende Menge erreicht wurde
         setZustand(false);                              //Ventil schließen

@@ -7,58 +7,84 @@
 
 #include "Observer.h"
 #include "Waage.h"
+#include <iostream>
+
+using namespace std;
+
 /**
  * Der Entleerer entleert den Behälter und reinigt diesen anschliesend
  * */
 class Entleerer: public Observer
 {
 	
-public:
-        Entleerer();
+    public:
+        /**
+         * Konstruktor zum erstellen eines Entleerers
+         * @param waage Waagen-Objekt zum beobachten
+         * @param zeit  Zeit-Objekt zum warten
+         */
         Entleerer(Waage *waage, Zeit* zeit);
+        
+        /**
+         * Standarddestruktor
+         */
         virtual ~Entleerer();
-	/**
-	 * 
-	 * */
-	void leeren();
-	/**
-	 * 
-	 * */
-	void reinigen();
-	
-
-	/**
-	 * 
-	 */
-	virtual void update();
-	private:
-	
-	/**
-	 * 
-	 */
-	Waage * subject;
-	
-	/**
-	 * 
-	 */
-	bool Zustand;
         
-        Zeit* m_Zeit;
+        /*-----------------------Getter-----------------------*/
         
-	public:
-	
-	/**
-	 * 
-	 */
-	void setZustand(bool zustand);
-	
-	/**
-	 * 
-	 */
+        /**
+         * gibt den Zustan des Ventils zurück
+         * @return false oder true (geschlossen oder geöffnet)
+         */
 	bool getZustand() const;
         
+        /**
+         * gibt das Zeit-Objekt zurück
+         * @return pointer auf das Zeit-Objekt
+         */
         Zeit* getZeit() const;
+        
+        /*-----------------------Setter-----------------------*/
+        
+        /**
+         * setzt den Zustand des Ventils
+         * @param zustand
+         */
+	void setZustand(bool zustand);
+        
+        /*-----------------------Funktionen-----------------------*/
+        
+	/**
+	 * Entleert den Cocktailbehälter mit 25g pro Sekunde
+	 * */
+	void leeren();
+        
+	/**
+	 * reinigt den Cocktailbehälter in 10 Sekunden
+	 * */
+	void reinigen();
+
+	/**
+	 * Funktion zur Aktuallisierung nach Änderung beim zu beobachtenden Objektes
+	 */
+	virtual void update();
+        
+    private:
 	
+	/**
+	 * Das zu beobachtende Objekt
+	 */
+	Waage * m_Subject;
+	
+	/**
+	 * Zustand ob das Ventil geöffnet ist (true = offen, false = geschlossen)
+	 */
+	bool m_Zustand;
+        
+        /**
+         * Zeit-Objekt zum warten
+         */
+        Zeit* m_Zeit;
 };
 
 #endif

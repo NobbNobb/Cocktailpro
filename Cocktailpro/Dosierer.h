@@ -81,7 +81,7 @@ class Dosierer: public Observer
         void dosieren(float menge);
 	
         /**
-	 * Funktion zum aktuallisieren nach Änderung beim beobachtenden Objektes 
+	 * Funktion zur Aktuallisierung nach Änderung beim zu beobachtenden Objektes 
 	 */
 	virtual void update();
         
