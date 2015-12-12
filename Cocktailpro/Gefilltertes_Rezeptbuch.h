@@ -37,12 +37,6 @@ class Gefilltertes_Rezeptbuch: public Rezeptbuch
          * @param zutaten vecotr mit allen verfügbaren Zutaten
          */
 	void filtern(vector<string> zutaten);
-	
-    private:
-	/**
-	 * Das Objekt der Dosiererverwaltung
-	 * */
-	Dosierer_Verwaltung * m_Dosierer_Verw;
 };
 
 #endif
