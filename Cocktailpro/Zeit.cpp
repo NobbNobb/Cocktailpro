@@ -21,6 +21,10 @@ void Zeit::setModus(bool modus){
     Modus = modus;
 }
 
+bool Zeit::getModus() const{
+    return Modus;
+}
+
 void Zeit::sleep(long zeit){
     clock_t limit;
     clock_t now = clock();

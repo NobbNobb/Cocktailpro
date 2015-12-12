@@ -20,6 +20,7 @@ public:
     
     void sleep(long zeit);
     void setModus(bool modus);
+    bool getModus() const;
 private:
     bool Modus; // 0 = 1 Sekunde, 1 = 10-tel Sekunde
 };

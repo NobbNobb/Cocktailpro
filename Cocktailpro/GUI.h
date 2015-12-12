@@ -35,6 +35,8 @@ public:
         void menue();
         
         void cocktailAuswahl();
+        
+        void speedModus();
 	
 private:
 	/**

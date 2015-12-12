@@ -52,6 +52,17 @@ void GUI::printCocktails()
     }
 }
 
+void GUI::speedModus(){
+    if(m_Rezeptur_Prozessor->getTimer()->getModus()){
+        cout << "Entwicklermodus wurde ausgeschaltet." << endl;
+        m_Rezeptur_Prozessor->getTimer()->setModus(false);
+    }
+    else{
+        cout << "Entwicklermodus wurde eingeschaltet." << endl;
+        m_Rezeptur_Prozessor->getTimer()->setModus(true);
+    }
+}
+
 void GUI::menue(){
     string eingabe;
     int zahl = 1;
@@ -72,7 +83,7 @@ void GUI::menue(){
                 cocktailAuswahl();
                 break;
             case 3:
-                cout << "Noch nicht implementiert" << endl;
+                speedModus();
                 break;
             case 4:
                 cout << "Auf Wiedersehen" << endl;
