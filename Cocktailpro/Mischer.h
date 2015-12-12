@@ -6,6 +6,7 @@
 #define MISCHER_H_H
 
 #include "Zeit.h"
+#include <iostream>
 
 using namespace std;
 
@@ -15,17 +16,28 @@ using namespace std;
 class Mischer
 {
 	
-public:
-        Mischer();
+    public:
+        /**
+         * Konstruktor zum erstellen eines Mischers
+         * @param zeit Zeit-Objekt zum warten
+         */
         Mischer(Zeit* zeit);
+        
+        /**
+         * Standarddestruktor
+         */
         virtual ~Mischer();
+        
+        /*-----------------------Funktionen-----------------------*/
+        
 	/**
-	 * 
-	 * */
+         * Mischt den Behälter für eine bestimmte Zeit
+         * @param zeit Zeit die gemischt werden soll
+         */
 	void mischen(float zeit);
 	
-private:
-    Zeit* m_Zeit;
+    private:
+        Zeit* m_Zeit;
 };
 
 #endif

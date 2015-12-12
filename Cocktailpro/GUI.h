@@ -16,7 +16,7 @@ class GUI
 	
     public:
 	/**
-	 * Standardkonstruktor
+	 * Standardkonstruktor zum erstellen einer GUI
 	 */
 	GUI();
         

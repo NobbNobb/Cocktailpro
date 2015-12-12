@@ -21,7 +21,7 @@ class Gefilltertes_Rezeptbuch: public Rezeptbuch
 	
     public:
 	/**
-	 * Standardkonstruktor
+	 * Standardkonstruktor zum erstellen eines gefillterten Rezeptbuches
 	 */
 	Gefilltertes_Rezeptbuch();
         
