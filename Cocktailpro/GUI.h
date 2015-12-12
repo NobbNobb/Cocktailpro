@@ -66,9 +66,7 @@ class GUI
 	/**
 	 * Das Objekt des Gefillterten Rezeptbuches
 	 * */
-	Gefilltertes_Rezeptbuch * m_Rezepte;
-	
-	
+	Gefilltertes_Rezeptbuch * m_Rezepte;	
 };
 
 #endif

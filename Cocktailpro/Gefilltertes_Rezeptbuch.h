@@ -19,27 +19,30 @@ using namespace std;
 class Gefilltertes_Rezeptbuch: public Rezeptbuch
 {
 	
-public:
+    public:
 	/**
-	 * 
+	 * Standardkonstruktor
 	 */
 	Gefilltertes_Rezeptbuch();
+        
         /**
-	 * 
+	 * Standarddestruktor
 	 */
 	virtual ~Gefilltertes_Rezeptbuch();
+        
+        /*-----------------------Funktionen-----------------------*/
+        
 	/**
-	 * 
-	 * */
-	void filtern(std::vector<std::string> zutaten);
+         * löscht die Rezepte, die nicht gemischt werden können
+         * @param zutaten vecotr mit allen verfügbaren Zutaten
+         */
+	void filtern(vector<string> zutaten);
 	
-private:
+    private:
 	/**
-	 * 
+	 * Das Objekt der Dosiererverwaltung
 	 * */
 	Dosierer_Verwaltung * m_Dosierer_Verw;
-	
-
 };
 
 #endif

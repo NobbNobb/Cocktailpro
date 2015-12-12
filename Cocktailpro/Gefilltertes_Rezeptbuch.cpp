@@ -4,68 +4,55 @@
 
 
 #include "Gefilltertes_Rezeptbuch.h"
-#include <iostream>
 
 /**
  * 
  */
 Gefilltertes_Rezeptbuch::Gefilltertes_Rezeptbuch(){
 }
-/**
- * 
- */
+
 Gefilltertes_Rezeptbuch::~Gefilltertes_Rezeptbuch(){
 }
 
-/**
- * 
- * */
-void Gefilltertes_Rezeptbuch::filtern(std::vector<std::string> zutaten)
+/*-----------------------Funktionen-----------------------*/
+
+void Gefilltertes_Rezeptbuch::filtern(vector<string> zutaten)
 {
-    Rezept* rezept;
-    Rezeptschritt* rSchritt;
-    vector<string> loeschListe;
+    Rezept* rezept;                                                     //Rezept-Objekt erstellen
+    Rezeptschritt* rSchritt;                                            //Rezeptschritt-Objekt erstellen                                       //
     string zutat;
     bool enthalten = false;
     bool loeschen = false;
     
-    for(int i = 0; i < getAnzahlRezepte(); i++){
-        rezept = getRezept(i);
-        for(int j = 0; j < rezept->getAnzahlRezeptschritte(); j++){
-            rSchritt = rezept->getRezeptSchritt(j);
-            zutat = rSchritt->getZutat();
-            loeschen = false;
-            enthalten = false;
-            for( int k = 0; k < zutaten.size(); k++){
-                if(zutaten.at(k) == zutat){
-                    enthalten = true;
+    for(int i = 0; i < getAnzahlRezepte(); i++){                        //Alle Rezepte durchlaufen
+        rezept = getRezept(i);                                          //Rezept speichern
+        for(int j = 0; j < rezept->getAnzahlRezeptschritte(); j++){     //Alle Rezeptschritte durchlaufen
+            rSchritt = rezept->getRezeptSchritt(j);                     //Rezeptschritt speichern
+            zutat = rSchritt->getZutat();                               //Zutat speichern
+            loeschen = false;                                           //loeschen zurücksetzen
+            enthalten = false;                                          //enthalten zurücksetzen
+            for( int k = 0; k < zutaten.size(); k++){                   //Alle verfügbaren Zutaten durchlaufen
+                if(zutaten.at(k) == zutat){                             //Zutaten vergelciehn
+                    enthalten = true;                                   //Zutat ist enthalten
                     break;
                 }
-                else if(zutat == "Stampfen"){
-                    enthalten = true;
+                else if(zutat == "Stampfen"){                           //Prüfen ob die Zutat "Stampfen" ist
+                    enthalten = true;                                   //Zutat ist enthalten
                     break;
                 }
-                else if(zutat == "Mischen"){
-                    enthalten = true;
+                else if(zutat == "Mischen"){                            //Prüfen ob die Zutat "Mischen" ist
+                    enthalten = true;                                   //Zutat ist enthalten
                     break;
                 }
             }
-            if(!enthalten){
-                loeschen = true;
+            if(!enthalten){                                             //Prüfen ob eine Zutat nicht enthalten war
+                loeschen = true;                                        //Rezept zum löschen merken
                 break;
             }
         }
-        if(loeschen){
-            loeschListe.push_back(rezept->getName());
-        }
-    }
-    for(int i = 0; i < loeschListe.size(); i++){
-        for(int j = 0; j < getAnzahlRezepte(); j++){
-            rezept = getRezept(j);
-            if(loeschListe.at(i) == rezept->getName()){
-                deleteRezept(j);
-                break;
-            }
+        if(loeschen){                                                   //Prüfen ob Rezept gelöscht werden muss
+            deleteRezept(i);                                            //Rezept löschen
+            i--;                                                        //Schleifenzähler anpassen
         }
     }
 }
