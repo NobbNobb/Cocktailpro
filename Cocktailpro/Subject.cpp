@@ -4,12 +4,14 @@
 
 
 #include "Subject.h"
+#include <algorithm>
+#include <iostream>
 /**
  * 
  */
 void Subject::attach(Observer *observer)
 {
-    observers->push_back(observer);
+    observers.push_back(observer);
 }
 
 /**
@@ -17,9 +19,8 @@ void Subject::attach(Observer *observer)
  */
 void Subject::notify()
 {
-    vector<Observer*>::iterator iter = observers->begin();
-    for(; iter != observers->end(); iter++){
-        (*iter)->update();
+    for(int i = 0; i < observers.size(); i++){
+        observers.at(i)->update();
     }
 }
 
@@ -28,6 +29,7 @@ void Subject::notify()
  */
 void Subject::detach(Observer *observer)
 {
-	
+    vector<Observer*>::iterator iter = remove(observers.begin(), observers.end(), observer);
+    observers.erase(iter, observers.end());
 }
 

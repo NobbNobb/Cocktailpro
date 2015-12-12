@@ -47,8 +47,11 @@ void Rezeptur_Prozessor::bereite_zu(Rezept* rezept)
             m_Stampfer->stampfen(rSchritt->getMenge());
         }
         else{
-            cout << "Hier würden jetzt " << rSchritt->getMenge() << "g an " << rSchritt->getZutat() << " dosiert werden" << endl;
-            //TODO implementieren der Dosierung
+            for(int i = 0; i < m_Dosierer_Verw->getM_Dosierer().size(); i++){
+                if(m_Dosierer_Verw->getM_Dosierer().at(i)->getZutat() == rSchritt->getZutat()){
+                    m_Dosierer_Verw->getM_Dosierer().at(i)->dosieren(rSchritt->getMenge());
+                }
+            }
         }
     }
 }

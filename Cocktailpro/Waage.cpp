@@ -48,8 +48,8 @@ float Waage::getDeltaGewicht() const
 /**
  * 
  */
-void Waage::addGewicht(float Gewicht)
+void Waage::addGewicht(float gewicht)
 {
-    deltaGewicht += Gewicht;
-    Gewicht += Gewicht;
+    deltaGewicht += gewicht;
+    Gewicht += gewicht;
 }

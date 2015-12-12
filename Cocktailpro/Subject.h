@@ -34,7 +34,7 @@ private:
 	/**
 	 * 
 	 */
-	vector<Observer*>* observers;
+	vector<Observer*> observers;
 	
 	
 };

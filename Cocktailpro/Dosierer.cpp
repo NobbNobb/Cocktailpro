@@ -34,7 +34,7 @@ std::string Dosierer::getZutat() const
 void Dosierer::update()
 {
     if(subject->getDeltaGewicht() >= Durchfluss){
-        setZustand(true);
+        setZustand(false);
     };
 }
 
@@ -67,7 +67,7 @@ void Dosierer::dosieren(float menge){
     subject->setDeltaGewicht(0);
     subject->attach(this);
     setZustand(true);
-    while(getZustand() == true){
+    while(getZustand()){
         if(getTyp() == false){
             //Stückdosierer
             if(getZutat() == "Limettenstücke"){
@@ -92,7 +92,7 @@ void Dosierer::dosieren(float menge){
             }
         }
     }
-    
+    subject->detach(this);
 }
 
 void Dosierer::setDurchfluss(float menge){
