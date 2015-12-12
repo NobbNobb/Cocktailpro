@@ -4,98 +4,87 @@
 
 
 #include "Dosierer.h"
-#include <iostream>
-
-Dosierer::Dosierer(){
-    
-}
 
 Dosierer::Dosierer(string zutat, bool typ){
-    Zutat = zutat;
-    Typ = typ;
-    Zustand = false;
-    Durchfluss = 0;
+    m_Zutat = zutat;
+    m_Typ = typ;
+    m_Zustand = false;
+    m_Durchfluss = 0;
 }
 
 Dosierer::~Dosierer(){
-    
-}
-/**
- * 
- * */
-std::string Dosierer::getZutat() const
-{
-	return Zutat;
 }
 
-/**
- * 
- */
-void Dosierer::update()
-{
-    subject->showGewicht();
-    if(subject->getDeltaGewicht() >= Durchfluss){
-        setZustand(false);
-        cout << "Ventil von Dosierer \"" << getZutat() << "\" geschlossen.";
-    };
+/*-----------------------Getter-----------------------*/
+
+string Dosierer::getZutat() const{
+    return m_Zutat;
 }
 
-/**
- * 
- */
-void Dosierer::setZustand(bool zustand)
+bool Dosierer::getZustand() const
 {
-	Zustand=zustand;
-}
-
-void Dosierer::setSubject(Waage* waage){
-    subject = waage;
+    return m_Zustand;
 }
 
 bool Dosierer::getTyp() const{
-    return Typ;
+    return m_Typ;
 }
 
-/**
- * 
- */
-bool Dosierer::getZustand() const
-{
-	return Zustand;
+/*-----------------------Setter-----------------------*/
+
+void Dosierer::setSubject(Waage* waage){
+    m_Subject = waage;
 }
+
+void Dosierer::setZustand(bool zustand)
+{
+    m_Zustand=zustand;
+}
+
+void Dosierer::setDurchfluss(float menge){
+    m_Durchfluss = menge;
+}
+
+/*-----------------------Funktionen-----------------------*/
 
 void Dosierer::dosieren(float menge){
-    setDurchfluss(menge);
-    subject->setDeltaGewicht(0);
-    subject->attach(this);
-    setZustand(true);
+    setDurchfluss(menge);                //Zu dosierende Menge speichern
+    m_Subject->setDeltaGewicht(0);       //Delta Gewicht zurücksetzen
+    m_Subject->attach(this);             //Observer anmelden
+    setZustand(true);                    //Ventil öffnen
     cout << endl << "Ventil von Dosierer \"" << getZutat() << "\" geöffnet." << endl;
-    subject->showGewicht();
-    while(getZustand()){
-        if(!getTyp()){
+    m_Subject->showGewicht();            //Gewicht ausgeben
+    while(getZustand()){                 //Prüfen ob Ventil offen ist
+        if(!getTyp()){                   //Prüfen welche Art von Dosierer vohanden ist
             //Stückdosierer
             if(getZutat() == "Limettenstücke"){
-                subject->addGewicht(10);
-                subject->notify();
-                subject->getZeit()->sleep(1000);
+                m_Subject->addGewicht(10);           //Gewicht hinzufügen
+                m_Subject->notify();                 //Alle Observer benachrichtigen
+                m_Subject->getZeit()->sleep(1000);   //Eine Sekunde warten
             }
             else{
-                subject->addGewicht(20);
-                subject->notify();
-                subject->getZeit()->sleep(1000);
+                m_Subject->addGewicht(20);           //Gewicht hinzufügen
+                m_Subject->notify();                 //Alle Observer benachrichtigen
+                m_Subject->getZeit()->sleep(1000);   //Eine Sekunde warten
             }
         }
         else{
             //normaler Dosierer
-            subject->addGewicht(1);
-            subject->notify();
-            subject->getZeit()->sleep(250);
+            m_Subject->addGewicht(1);                //Gewicht hinzufügen
+            m_Subject->notify();                     //Alle Observer benachrichtigen
+            m_Subject->getZeit()->sleep(250);        //0.25 Sekunden warten
         }
     }
-    subject->detach(this);
+    m_Subject->detach(this);             //Observer abmelden
+    setDurchfluss(0);                    //Zu dosierende Menge wieder zurücksetzen
     cout << endl;
 }
 
-void Dosierer::setDurchfluss(float menge){
-    Durchfluss = menge;
+void Dosierer::update()
+{
+    m_Subject->showGewicht();                           //Gewicht ausgeben
+    if(m_Subject->getDeltaGewicht() >= m_Durchfluss){   //Prüfen ob die zu dosierende Menge erreicht wurde
+        setZustand(false);                              //Ventil schließen
+        cout << "Ventil von Dosierer \"" << getZutat() << "\" geschlossen.";
+    };
 }
