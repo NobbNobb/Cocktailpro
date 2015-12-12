@@ -83,11 +83,9 @@ void Dosierer::dosieren(float menge){
         }
         else{
             //normaler Dosierer
-            for(int i = 0; i < 4; i++){
-                cout << "Es werden 0.25g " << getZutat() << " Limettenstücke dosiert" << endl;
-                subject->addGewicht(0.25);
+                cout << "Es werden 1 " << getZutat() << " Limettenstücke dosiert" << endl;
+                subject->addGewicht(1);
                 subject->notify();
-            }
         }
     }
     subject->detach(this);
