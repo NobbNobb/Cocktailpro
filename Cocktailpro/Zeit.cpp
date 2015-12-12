@@ -11,31 +11,34 @@ Zeit::Zeit() {
     Modus = false;
 }
 
-//Zeit::Zeit(const Zeit& orig) {
-//}
-
 Zeit::~Zeit() {
 }
 
-void Zeit::setModus(bool modus){
-    Modus = modus;
-}
+/*-----------------------Getter-----------------------*/
 
 bool Zeit::getModus() const{
     return Modus;
 }
 
+/*-----------------------Setter-----------------------*/
+
+void Zeit::setModus(bool modus){
+    Modus = modus;
+}
+
+/*-----------------------Funktionen-----------------------*/
+
 void Zeit::sleep(long zeit){
-    clock_t limit;
-    clock_t now = clock();
+    clock_t limit;              //Zeit des Ende
+    clock_t now = clock();      //aktuelle Zeit
     if(Modus){
         limit = now + zeit * CLOCKS_PER_SEC / 10000;
     }
     else{
         limit = now + zeit * CLOCKS_PER_SEC / 1000;
     }
-    while(limit > now){
-        now = clock();
+    while(limit > now){         //Prüfen ob das Ende erreicht wurde
+        now = clock();          //neue aktuelle Zeit holen
     }
 }
 

@@ -13,16 +13,47 @@
 using namespace std;
 
 class Zeit {
-public:
-    Zeit();
-//    Zeit(const Zeit& orig);
-    virtual ~Zeit();
     
-    void sleep(long zeit);
-    void setModus(bool modus);
-    bool getModus() const;
-private:
-    bool Modus; // 0 = 1 Sekunde, 1 = 10-tel Sekunde
+    public:
+        /**
+         * Standardkonstruktor zum erstellen des Zeit-Objektes
+         */
+        Zeit();
+        
+        /**
+         * Standarddestruktor
+         */
+        virtual ~Zeit();
+        
+        /*-----------------------Getter-----------------------*/
+        
+        /**
+         * gibt den Modus zurück in dem das Zeit-Objekt ist
+         * @return true oder false (true = 10-tel Sekunde, false = 1 Sekunde)
+         */
+        bool getModus() const;
+        
+        /*-----------------------Setter-----------------------*/
+        
+        /**
+         * setzt den Modus des Zeit-Objektes
+         * @param modus
+         */
+        void setModus(bool modus);
+        
+        /*-----------------------Funktionen-----------------------*/
+        
+        /**
+         * wartet eine bestimmte Zeit ab
+         * @param zeit Dauer wie lange gewartet werden soll
+         */
+        void sleep(long zeit);
+        
+    private:
+        /**
+         *  Wertung der zeit (false = 1 Sekunde, true = 10-tel Sekunde)
+         */
+        bool Modus;
 };
 
 #endif	/* ZEIT_H */
