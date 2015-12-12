@@ -22,7 +22,7 @@ class Dosierer: public Observer
             
             
         Dosierer();
-        Dosierer(string zutat);
+        Dosierer(string zutat, bool typ);
         virtual ~Dosierer();
 	/**
 	 * 
@@ -39,8 +39,13 @@ class Dosierer: public Observer
 	 */
 	void setZustand(bool zustand);
 	
+        void dosieren(float menge);
         
         void setSubject(Waage *waage);
+        
+        bool getTyp() const;
+        
+        void setDurchfluss(float menge);
 	
 	/**
 	 * 
@@ -61,6 +66,10 @@ class Dosierer: public Observer
 	/**
 	 * 
 	 * */
-	std::string Zutat;
+	string Zutat;
+        
+        bool Typ;
+        
+        float Durchfluss;
 	
 };

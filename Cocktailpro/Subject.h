@@ -20,11 +20,11 @@ public:
 	/**
 	 * 
 	 */
-	void attach(Observer &observer);
+	void attach(Observer *observer);
 	/**
 	 * 
 	 */
-	void detach(Observer &observer);
+	void detach(Observer *observer);
 	/**
 	 * 
 	 */

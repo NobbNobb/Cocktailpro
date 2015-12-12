@@ -16,7 +16,7 @@ Waage::~Waage(){
 /**
  * 
  */
-void Waage::setGewicht(int gewicht)
+void Waage::setGewicht(float gewicht)
 {
 	Gewicht=gewicht;
 }
@@ -24,7 +24,7 @@ void Waage::setGewicht(int gewicht)
 /**
  * 
  */
-int Waage::getGewicht() const
+float Waage::getGewicht() const
 {
 	return Gewicht;
 }
@@ -32,7 +32,7 @@ int Waage::getGewicht() const
 /**
  * 
  */
-void Waage::setDeltaGewicht(int deltaGewicht)
+void Waage::setDeltaGewicht(float deltaGewicht)
 {
 	this->deltaGewicht=deltaGewicht;
 }
@@ -40,7 +40,7 @@ void Waage::setDeltaGewicht(int deltaGewicht)
 /**
  * 
  */
-int Waage::getDeltaGewicht() const
+float Waage::getDeltaGewicht() const
 {
 	return deltaGewicht;
 }
@@ -48,7 +48,8 @@ int Waage::getDeltaGewicht() const
 /**
  * 
  */
-void Waage::addGewicht(int Gewicht)
+void Waage::addGewicht(float Gewicht)
 {
-	
+    deltaGewicht += Gewicht;
+    Gewicht += Gewicht;
 }

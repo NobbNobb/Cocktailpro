@@ -16,12 +16,12 @@ class Waage: public Subject
 	/**
 	 * 
 	 */
-	int Gewicht;
+	float Gewicht;
 	
 	/**
 	 * 
 	 */
-	int deltaGewicht;
+	float deltaGewicht;
 	public:
             
         Waage();
@@ -30,28 +30,28 @@ class Waage: public Subject
 	/**
 	 * 
 	 */
-	void setGewicht(int gewicht);
+	void setGewicht(float gewicht);
 	
 	/**
 	 * 
 	 */
-	int getGewicht() const;
+	float getGewicht() const;
 	
 	/**
 	 * 
 	 */
-	void setDeltaGewicht(int deltaGewicht);
+	void setDeltaGewicht(float deltaGewicht);
 	
 	/**
 	 * 
 	 */
-	int getDeltaGewicht() const;
+	float getDeltaGewicht() const;
 	
 	/**
 	 * 
 	 */
-	void addGewicht(int Gewicht);
-	
+	void addGewicht(float Gewicht);
+        
 };
 
 #endif
