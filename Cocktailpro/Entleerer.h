@@ -15,7 +15,7 @@ class Entleerer: public Observer
 	
 public:
         Entleerer();
-        Entleerer(Waage *waage);
+        Entleerer(Waage *waage, Zeit* zeit);
         virtual ~Entleerer();
 	/**
 	 * 
@@ -43,6 +43,8 @@ public:
 	 */
 	bool Zustand;
         
+        Zeit* m_Zeit;
+        
 	public:
 	
 	/**
@@ -54,6 +56,8 @@ public:
 	 * 
 	 */
 	bool getZustand() const;
+        
+        Zeit* getZeit() const;
 	
 };
 

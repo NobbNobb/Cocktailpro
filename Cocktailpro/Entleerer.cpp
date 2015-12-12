@@ -10,8 +10,9 @@ Entleerer::Entleerer(){
     
 }
 
-Entleerer::Entleerer(Waage *waage){
+Entleerer::Entleerer(Waage *waage, Zeit* zeit){
     subject = waage;
+    m_Zeit = zeit;
     Zustand = false;
 }
 
@@ -39,6 +40,7 @@ void Entleerer::leeren()
         cout << "Es werden 25g des Cocktails entleert" << endl;
         subject->addGewicht(-25);
         subject->notify();
+        subject->getZeit()->sleep(1000);
     }
     subject->detach(this);
 }
@@ -69,4 +71,8 @@ void Entleerer::setZustand(bool zustand)
 bool Entleerer::getZustand() const
 {
 	return Zustand;
+}
+
+Zeit* Entleerer::getZeit() const{
+    return m_Zeit;
 }

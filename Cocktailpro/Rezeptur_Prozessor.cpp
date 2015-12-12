@@ -16,7 +16,7 @@ Rezeptur_Prozessor::Rezeptur_Prozessor(Dosierer_Verwaltung *dVerwaltung){
     Stampfer* stampfer = new Stampfer();
     Mischer* mischer = new Mischer();
     Waage* waage = new Waage(zeit);
-    Entleerer* entleerer = new Entleerer(waage);
+    Entleerer* entleerer = new Entleerer(waage, zeit);
     
     m_Zeit = zeit;
     m_Dosierer_Verw = dVerwaltung;
