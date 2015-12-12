@@ -4,10 +4,15 @@
 
 
 #include "Waage.h"
+#include "Zeit.h"
 
 Waage::Waage(){
     Gewicht = 0;
     deltaGewicht = 0;
+}
+
+Waage::Waage(Zeit* zeit){
+    m_Zeit = zeit;
 }
 
 Waage::~Waage(){
@@ -27,6 +32,10 @@ void Waage::setGewicht(float gewicht)
 float Waage::getGewicht() const
 {
 	return Gewicht;
+}
+
+Zeit* Waage::getZeit() const{
+    return m_Zeit;
 }
 
 /**

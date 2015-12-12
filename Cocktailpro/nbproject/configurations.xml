@@ -16,6 +16,7 @@
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.h</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.h</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.h</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Zeit.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -35,6 +36,7 @@
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Stampfer.cpp</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Subject.cpp</itemPath>
       <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.cpp</itemPath>
+      <itemPath>/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Zeit.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -179,6 +181,16 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Zeit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Zeit.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -313,6 +325,16 @@
             flavor2="0">
       </item>
       <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Zeit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Zeit.h"
             ex="false"
             tool="3"
             flavor2="0">

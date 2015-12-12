@@ -46,6 +46,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/2117958763/Stampfer.o \
 	${OBJECTDIR}/_ext/2117958763/Subject.o \
 	${OBJECTDIR}/_ext/2117958763/Waage.o \
+	${OBJECTDIR}/_ext/2117958763/Zeit.o \
 	${OBJECTDIR}/main.o
 
 
@@ -129,6 +130,11 @@ ${OBJECTDIR}/_ext/2117958763/Waage.o: /home/fs/NetBeansProjects/Cocktailpro/Cock
 	${MKDIR} -p ${OBJECTDIR}/_ext/2117958763
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/2117958763/Waage.o /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Waage.cpp
+
+${OBJECTDIR}/_ext/2117958763/Zeit.o: /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Zeit.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/2117958763
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/2117958763/Zeit.o /home/fs/NetBeansProjects/Cocktailpro/Cocktailpro/Zeit.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

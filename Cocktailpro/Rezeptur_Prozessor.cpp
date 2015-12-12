@@ -4,6 +4,7 @@
 
 
 #include "Rezeptur_Prozessor.h"
+#include "Zeit.h"
 #include <iostream>
 
 Rezeptur_Prozessor::Rezeptur_Prozessor(){
@@ -11,11 +12,13 @@ Rezeptur_Prozessor::Rezeptur_Prozessor(){
 }
 
 Rezeptur_Prozessor::Rezeptur_Prozessor(Dosierer_Verwaltung *dVerwaltung){
+    Zeit* zeit = new Zeit();
     Stampfer* stampfer = new Stampfer();
     Mischer* mischer = new Mischer();
-    Waage* waage = new Waage();
+    Waage* waage = new Waage(zeit);
     Entleerer* entleerer = new Entleerer(waage);
     
+    m_Zeit = zeit;
     m_Dosierer_Verw = dVerwaltung;
     m_Stampfer = stampfer;
     m_Mischer = mischer;
@@ -57,3 +60,6 @@ void Rezeptur_Prozessor::bereite_zu(Rezept* rezept)
     m_Entleerer->leeren();
 }
 
+Zeit* Rezeptur_Prozessor::getTimer() const{
+    return m_Zeit;
+}

@@ -76,11 +76,13 @@ void Dosierer::dosieren(float menge){
                 cout << "Es werden 10g Limettenstücke dosiert" << endl;
                 subject->addGewicht(10);
                 subject->notify();
+                subject->getZeit()->sleep(1000);
             }
             else{
                 cout << "Es werden 20g Eis dosiert" << endl;
                 subject->addGewicht(20);
                 subject->notify();
+                subject->getZeit()->sleep(1000);
             }
         }
         else{
@@ -88,6 +90,7 @@ void Dosierer::dosieren(float menge){
                 cout << "Es werden 1g " << getZutat() << " dosiert" << endl;
                 subject->addGewicht(1);
                 subject->notify();
+                subject->getZeit()->sleep(250);
         }
     }
     subject->detach(this);

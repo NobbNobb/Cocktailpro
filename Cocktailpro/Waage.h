@@ -6,6 +6,7 @@
 #define WAAGE_H_H
 
 #include "Subject.h"
+#include "Zeit.h"
 /**
  * Die Waage kontroliert das Gewicht des zu befüllenden Behälters während des ganzen Mischvorganges.Überprüft das Absolute Gewicht und den Delta-Nullpunkt
  * */
@@ -22,9 +23,12 @@ class Waage: public Subject
 	 * 
 	 */
 	float deltaGewicht;
+        
+        Zeit* m_Zeit;
 	public:
             
         Waage();
+        Waage(Zeit* timer);
         virtual ~Waage();
 	
 	/**
@@ -36,6 +40,8 @@ class Waage: public Subject
 	 * 
 	 */
 	float getGewicht() const;
+        
+        Zeit* getZeit() const;
 	
 	/**
 	 * 

@@ -9,6 +9,7 @@
 #include "Stampfer.h"
 #include "Mischer.h"
 #include "Waage.h"
+#include "Zeit.h"
 #include "Dosierer_Verwaltung.h"
 #include "string.h"
 #include "Gefilltertes_Rezeptbuch.h"
@@ -26,6 +27,7 @@ public:
 	 * 
 	 * */
 	void bereite_zu(Rezept* rezept);
+        Zeit* getTimer() const;
 	
 private:
 	/**
@@ -52,6 +54,8 @@ private:
 	 * 
 	 * */
 	Waage * m_Waage;
+        
+        Zeit*  m_Zeit;
 	
 	
 };

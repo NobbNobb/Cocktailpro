@@ -8,7 +8,6 @@
 #include <cstdlib>
 #include "GUI.h"
 #include <iostream>
-
 using namespace std;
 
 int main(int argc, char** argv) {
@@ -17,6 +16,5 @@ int main(int argc, char** argv) {
     GUI ctp;
     ctp.init();
     ctp.menue();
-    return 0;
 }
 
