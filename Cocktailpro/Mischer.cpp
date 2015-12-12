@@ -5,10 +5,6 @@
 
 #include "Mischer.h"
 
-Mischer::Mischer(){
-    
-}
-
 Mischer::Mischer(Zeit* zeit){
     m_Zeit = zeit;
 }

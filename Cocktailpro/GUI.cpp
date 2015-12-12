@@ -4,12 +4,6 @@
 
 
 #include "GUI.h"
-#include <iostream>
-#include <string>
-#include <cstdlib>
-
-using namespace std;
-
 
 GUI::GUI(){
 }
@@ -79,32 +73,40 @@ void GUI::menue(){
 }
 
 void GUI::cocktailAuswahl() const{
-    string eingabe;
-    int zahl = 0;
-    while(!zahl){
-        cout << "Bitte Cocktail auswählen (0 für Abbruch): ";
-        getline(cin, eingabe);                                              //Auf Eingabe warten
-        zahl = atoi(eingabe.c_str());                                       //Falscher Eingabentyp abfangen
-        if(0 < zahl && zahl < m_Rezepte->getAnzahlRezepte()){               //Prüfen ob das gewählte Rezept existiert
-            m_Rezeptur_Prozessor->bereite_zu(m_Rezepte->getRezept(zahl-1)); //Cocktail zubereiten
+    int eingabe = 0;
+    while(!eingabe){
+        cout << "Bitte Cocktail auswählen (0 für Abbruch): ";                       
+        while(!(cin >> eingabe)){                                               //Eingabe auf Falscheingabe prüfen
+            cout << "Falsche Eingabe! Bitte ernaut eingeben: ";                 
+            cin.clear();                                                        //Löschen von error flags
+            cin.ignore(std::numeric_limits<int>::max(),'\n');                   //Bis zur nächsten newline überspringen
         }
-        else if(zahl == 0){                                                 //Prüfen ob Abbruch gewählt wurde
-            zahl = 1;                   
+        if(0 < eingabe && eingabe < m_Rezepte->getAnzahlRezepte()){             //Prüfen ob die Eingabe im Zahlenbereich liegt
+            m_Rezeptur_Prozessor->bereite_zu(m_Rezepte->getRezept(eingabe - 1));//Cocktail zubereiten
+            cin.clear();                                                        //Löschen von error flags
+            cin.ignore(std::numeric_limits<int>::max(),'\n');                   //Bis zur nächsten newline überspringen
         }
-        else{                                                               //Falscheingabe abfangen
-            cout << "Falsche Eingabe! Bitte erneut eignaben" << endl;
-            zahl = 0;
+        else if(eingabe == 0){                                                  //Prüfen ob "0" eingegeben wurde
+            eingabe = 1;                                                        //Abbruchsbedingung setzen
+            cin.clear();                                                        //Löschen von error flags
+            cin.ignore(std::numeric_limits<int>::max(),'\n');                   //Bis zur nächsten newline überspringen
+        }
+        else{
+            cout << "Falsche Eingabe! Bitte erneut eingben" << endl;
+            eingabe = 0;                                                        //Abbruchsbedingung nicht setzen
+            cin.clear();                                                        //Löschen von error flags
+            cin.ignore(std::numeric_limits<int>::max(),'\n');                   //Bis zur nächsten newline überspringen
         }
     }
 }
 
 void GUI::speedModus(){
-    if(m_Rezeptur_Prozessor->getTimer()->getModus()){                       //Prüfen ob Speedmodus schon an ist
+    if(m_Rezeptur_Prozessor->getZeit()->getModus()){                       //Prüfen ob Speedmodus schon an ist
         cout << "Entwicklermodus wurde ausgeschaltet." << endl;
-        m_Rezeptur_Prozessor->getTimer()->setModus(false);                  //Speedmodus ausschalten
+        m_Rezeptur_Prozessor->getZeit()->setModus(false);                  //Speedmodus ausschalten
     }
     else{
         cout << "Entwicklermodus wurde eingeschaltet." << endl;
-        m_Rezeptur_Prozessor->getTimer()->setModus(true);                   //Speedmodus einschalten
+        m_Rezeptur_Prozessor->getZeit()->setModus(true);                   //Speedmodus einschalten
     }
 }

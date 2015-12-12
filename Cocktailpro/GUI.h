@@ -8,6 +8,12 @@
 #include "Gefilltertes_Rezeptbuch.h"
 #include "Dosierer_Verwaltung.h"
 #include "Rezeptur_Prozessor.h"
+#include <iostream>
+#include <string>
+#include <limits>
+
+using namespace std;
+
 /**
  * Das Display bietet die Übersicht der mischbaren Cocktails und gibt Informationen zum Mischvorgang an
  * */
