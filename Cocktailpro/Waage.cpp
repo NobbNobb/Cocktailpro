@@ -6,69 +6,52 @@
 #include "Waage.h"
 #include "Zeit.h"
 
-Waage::Waage(){
-    Gewicht = 0;
-    deltaGewicht = 0;
-}
-
 Waage::Waage(Zeit* zeit){
     m_Zeit = zeit;
+    m_Gewicht = 0;
+    m_DeltaGewicht = 0;
 }
 
-Waage::~Waage(){
-    
-}
-/**
- * 
- */
-void Waage::setGewicht(float gewicht)
-{
-	Gewicht=gewicht;
+Waage::~Waage(){   
 }
 
-/**
- * 
- */
-float Waage::getGewicht() const
-{
-	return Gewicht;
+/*-----------------------Getter-----------------------*/
+
+float Waage::getDeltaGewicht() const{
+    return m_DeltaGewicht;
+}
+
+float Waage::getGewicht() const{
+    return m_Gewicht;
 }
 
 Zeit* Waage::getZeit() const{
     return m_Zeit;
 }
 
-/**
- * 
- */
-void Waage::setDeltaGewicht(float deltaGewicht)
-{
-	this->deltaGewicht=deltaGewicht;
+/*-----------------------Setter-----------------------*/
+
+void Waage::setDeltaGewicht(float deltaGewicht){
+    m_DeltaGewicht = deltaGewicht;
 }
 
-/**
- * 
- */
-float Waage::getDeltaGewicht() const
-{
-	return deltaGewicht;
+void Waage::setGewicht(float gewicht){
+    m_Gewicht = gewicht;
 }
 
-/**
- * 
- */
-void Waage::addGewicht(float gewicht)
-{
-    deltaGewicht += gewicht;
-    Gewicht += gewicht;
+/*-----------------------Funktionen-----------------------*/
+
+void Waage::addGewicht(float gewicht){
+    m_DeltaGewicht += gewicht;          //Gewicht auf das Delta-Gewicht addieren
+    m_Gewicht += gewicht;               //Gewicht auf das Absolut-Gewicht addieren
 }
 
 void Waage::showGewicht(){
-    if(deltaGewicht < 0){
-        deltaGewicht = 0;
+    if(m_DeltaGewicht < 0){             //Prüfen ob das Delta-Gewicht negativ ist
+        m_DeltaGewicht = 0;             //Delta-Gewicht auf "0" setzen
     }
-    if(Gewicht < 0){
-        Gewicht = 0;
+    if(m_Gewicht < 0){                  //Prüfen ob das Absolut-Gewicht negativ ist
+        m_Gewicht = 0;                  //Absolut-Gewicht auf "0" setzen
     }
-    cout << "Absolute: " << Gewicht << "g | Delta: " << deltaGewicht << "g" << endl;
+    cout << "Absolute: " << m_Gewicht << "g | Delta: " << m_DeltaGewicht << "g" << endl; //Ausgabe beider Gewichtsvariablen
 }
