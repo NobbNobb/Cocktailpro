@@ -28,7 +28,7 @@ class Dosierer: public Observer
         Dosierer(string zutat, bool typ);
         
         /**
-         * Standartdestruktor
+         * Standarddestruktor
          */
         virtual ~Dosierer();
     
@@ -110,6 +110,5 @@ class Dosierer: public Observer
         /**
          *Menge die dosiert werden muss
          **/
-        float m_Durchfluss;
-	
+        float m_Durchfluss;	
 };

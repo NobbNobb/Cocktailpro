@@ -4,68 +4,49 @@
 
 
 #include "Dosierer_Verwaltung.h"
-#include <vector>
-#include <fstream>
-#include <iostream>
 
-using namespace std;
-
-/**
- * 
- */
 Dosierer_Verwaltung::Dosierer_Verwaltung(){
 }
 
-/**
- * 
- */
 Dosierer_Verwaltung::~Dosierer_Verwaltung(){
 }
 
+/*-----------------------Getter-----------------------*/
 
-/**
- * 
- * */
-void Dosierer_Verwaltung::dateiLaden()
+vector<string> Dosierer_Verwaltung::getZutaten() const
 {
-    cout << "Starte einlesen der Zutaten..." << endl;
-    string word, filename = "zutaten.txt";
-    ifstream load;
-    load.open(filename.c_str(), ios::in);
-    if(!load){
-        cerr << filename << " wurde nicht gefunden!" << endl;
-        return;
-    }
-    while(!load.eof()){
-        getline(load, word);
-        Zutaten.push_back(word);
-        if(word == "Limettenstücke" || word == "Eis"){
-            Dosierer* dosierer = new Dosierer(word, false);
-            m_Dosierer.push_back(dosierer);
-        }
-        else{
-            Dosierer* dosierer = new Dosierer(word, true);
-            m_Dosierer.push_back(dosierer);
-        }
-    }
-    load.close();
-    cout << "Zutaten wurden erfolgreich eingelesen." << endl;
+	return m_Zutaten;
 }
 
-/**
- * 
- * */
-std::vector<std::string> Dosierer_Verwaltung::getZutaten() const
-{
-	return Zutaten;
-}
-
-
-/**
- * 
- * */
 vector<Dosierer*> Dosierer_Verwaltung::getM_Dosierer() const
 {
 	return m_Dosierer;
 }
 
+/*-----------------------Funktionen-----------------------*/
+
+void Dosierer_Verwaltung::dateiLaden()
+{
+    cout << "Starte einlesen der Zutaten..." << endl;
+    string word, filename = "zutaten.txt";                 //deklarieren und initialisieren der Variabeln
+    ifstream load;                                         //deklarieren des filestreams
+    load.open(filename.c_str(), ios::in);                  //Zutaten in den filestream laden
+    if(!load){                                             //Prüfen ob das laden erfolgreich war
+        cerr << filename << " wurde nicht gefunden!" << endl;
+        return;
+    }
+    while(!load.eof()){                                    
+        getline(load, word);                               //Zutat aus dem filestream holen
+        m_Zutaten.push_back(word);                         //Zutat in den Vektor schieben
+        if(word == "Limettenstücke" || word == "Eis"){     //Prüfen ob die Zutat "Limettenstücke" oder "Eis" ist 
+            Dosierer* dosierer = new Dosierer(word, false);//Dosierer-Objekt erstellen 
+            m_Dosierer.push_back(dosierer);                //Dosierer in den Vektor schieben 
+        }
+        else{
+            Dosierer* dosierer = new Dosierer(word, true); //Dosierer-Objekt erstellen
+            m_Dosierer.push_back(dosierer);                //Dosierer in den Vektor schieben
+        }
+    }
+    load.close();                                          //filestream wieder schließen 
+    cout << "Zutaten wurden erfolgreich eingelesen." << endl;
+}

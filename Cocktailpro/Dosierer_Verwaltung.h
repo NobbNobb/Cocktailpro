@@ -9,6 +9,9 @@
 #include "Dosierer.h"
 #include <vector>
 #include <string>
+#include <fstream>
+#include <iostream>
+
 using namespace std;
 /**
  * Erstellt die Dosierer und befüllt diese (Zutat, Durchflussrate)
@@ -16,41 +19,49 @@ using namespace std;
 class Dosierer_Verwaltung
 {
 	
-public:
+    public:
 	/**
-	 * 
+	 * Konstruktor zur Erstellung einer Dosiererverwaltung
 	 */
 	Dosierer_Verwaltung();
+        
         /**
-	 * 
+	 * Standarddestruktor
 	 */
 	virtual ~Dosierer_Verwaltung();
+        
+        /*-----------------------Getter-----------------------*/
+        
+        /**
+         * gibt den Vector der Dosierer-Objekte zurück
+         * @return vector mit Dosierer-Objekte
+         */
+	vector<Dosierer*> getM_Dosierer() const;
+        
 	/**
-	 * 
+	 * gibt den Vector der Zutaten zurück
+         * @return vector mit Zutaten
+	 * */
+	vector<string> getZutaten() const;
+        
+        /*-----------------------Funktionen-----------------------*/
+        
+	/**
+	 * liest die Zutatendatei ein und erstellt die Dosierer
 	 * */
 	void dateiLaden();
-	/**
-	 * 
-	 * */
-	vector<Dosierer*> getM_Dosierer() const;
-	/**
-	 * 
-	 * */
-	std::vector<std::string> getZutaten() const;
-
 	
-private:
-	/**
-	 * 
+    private:
+	
+        /**
+	 * Vector der Dosierer-Objekte
 	 * */
 	vector<Dosierer*> m_Dosierer;
 	
 	/**
-	 * 
+	 * Vector der Zutaten
 	 * */
-	vector<string> Zutaten;
-	
-	
+	vector<string> m_Zutaten;
 };
 
 #endif
