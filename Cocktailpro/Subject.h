@@ -7,32 +7,37 @@
 
 #include "Observer.h"
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 /**
- * 
+ * Subject-Klasse mit den Funktionen zum anmelden, abmelden und benachrichtigen von Observern
  */
 class Subject
 {
 	
-public:
-	/**
-	 * 
-	 */
+    public:
+        /**
+         * meldet einen Observer an
+         * @param observer der anzumeldende Observer
+         */
 	void attach(Observer *observer);
-	/**
-	 * 
-	 */
+        
+        /**
+         * meldet einen Observer ab
+         * @param observer der abzumeldende Observer
+         */
 	void detach(Observer *observer);
+        
 	/**
-	 * 
+	 * benachrichtigt alle Observer
 	 */
 	void notify();
 	
-private:
+    private:
 	/**
-	 * 
+	 * Vektor mit allen Observer-Objekten
 	 */
 	vector<Observer*> observers;
 	

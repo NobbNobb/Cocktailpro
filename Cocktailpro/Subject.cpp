@@ -4,32 +4,22 @@
 
 
 #include "Subject.h"
-#include <algorithm>
-#include <iostream>
-/**
- * 
- */
+
 void Subject::attach(Observer *observer)
 {
-    observers.push_back(observer);
+    observers.push_back(observer);                  //Observer dem Vektor hinzufügen
 }
 
-/**
- * 
- */
 void Subject::notify()
 {
-    for(int i = 0; i < observers.size(); i++){
-        observers.at(i)->update();
+    for(int i = 0; i < observers.size(); i++){      //Alle Observer im Verktor durchlaufen
+        observers.at(i)->update();                  //update auf Observer aufrufen
     }
 }
 
-/**
- * 
- */
 void Subject::detach(Observer *observer)
 {
-    vector<Observer*>::iterator iter = remove(observers.begin(), observers.end(), observer);
-    observers.erase(iter, observers.end());
+    vector<Observer*>::iterator iter = remove(observers.begin(), observers.end(), observer); //Iterator des zu löschenden Observers suchen
+    observers.erase(iter, observers.end());                                                  //Observer aus dem Vektor entfernen anhand des Iterators
 }
 

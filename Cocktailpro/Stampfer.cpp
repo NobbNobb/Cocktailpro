@@ -9,14 +9,12 @@ Stampfer::Stampfer(Zeit* zeit){
     m_Zeit = zeit;
 }
 
-Stampfer::~Stampfer(){
-    
+Stampfer::~Stampfer(){   
 }
 
 /*-----------------------Funktionen-----------------------*/
 
-void Stampfer::stampfen(float zeit)
-{
+void Stampfer::stampfen(float zeit){
     cout << endl << "Cocktail wird gestampft. Bitte warten: ";
     for(int i = 0; i < zeit; i++){
         cout << "*";
