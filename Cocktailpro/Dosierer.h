@@ -68,7 +68,7 @@ class Dosierer: public Observer
 	 * */
 	string Zutat;
         
-        bool Typ;
+        bool Typ; //false = Stückdosierer, true = normaler Dosierer
         
         float Durchfluss;
 	

@@ -68,16 +68,14 @@ void Dosierer::dosieren(float menge){
     subject->attach(this);
     setZustand(true);
     while(getZustand()){
-        if(getTyp() == false){
+        if(!getTyp()){
             //Stückdosierer
             if(getZutat() == "Limettenstücke"){
-                //10g
                 cout << "Es werden 10g Limettenstücke dosiert" << endl;
                 subject->addGewicht(10);
                 subject->notify();
             }
             else{
-                //20g
                 cout << "Es werden 20g Eis dosiert" << endl;
                 subject->addGewicht(20);
                 subject->notify();
