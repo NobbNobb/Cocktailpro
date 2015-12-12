@@ -49,7 +49,7 @@ void Dosierer_Verwaltung::dateiLaden()
         }
     }
     load.close();
-    cout << "Zutaten wurden erfolgreich geladen" << endl;
+    cout << "Zutaten wurden erfolgreich eingelesen." << endl;
 }
 
 /**

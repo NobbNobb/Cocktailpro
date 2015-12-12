@@ -62,3 +62,13 @@ void Waage::addGewicht(float gewicht)
     deltaGewicht += gewicht;
     Gewicht += gewicht;
 }
+
+void Waage::showGewicht(){
+    if(deltaGewicht < 0){
+        deltaGewicht = 0;
+    }
+    if(Gewicht < 0){
+        Gewicht = 0;
+    }
+    cout << "Absolute: " << Gewicht << "g | Delta: " << deltaGewicht << "g" << endl;
+}

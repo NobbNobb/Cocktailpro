@@ -7,6 +7,10 @@
 
 #include "Subject.h"
 #include "Zeit.h"
+#include <iostream>
+
+using namespace std;
+
 /**
  * Die Waage kontroliert das Gewicht des zu befüllenden Behälters während des ganzen Mischvorganges.Überprüft das Absolute Gewicht und den Delta-Nullpunkt
  * */
@@ -57,6 +61,8 @@ class Waage: public Subject
 	 * 
 	 */
 	void addGewicht(float Gewicht);
+        
+        void showGewicht();
         
 };
 

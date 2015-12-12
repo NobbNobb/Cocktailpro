@@ -22,12 +22,12 @@ Mischer::~Mischer(){
  */
 void Mischer::mischen(float zeit)
 {
-    cout << "Cocktail wird gemischt." << endl;
+    cout << endl << "Cocktail wird gemischt. Bitte warten: ";
     for(int i = 0; i < zeit; i++){
         cout << "*";
         cout.flush();
         m_Zeit->sleep(1000);
     }
-    cout << endl << endl;;
+    cout << endl;
 }
 

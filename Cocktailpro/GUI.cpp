@@ -67,6 +67,7 @@ void GUI::menue(){
     string eingabe;
     int zahl = 1;
     while(zahl){
+        cout << endl;
         cout << "*******Menue*******" << endl;
         cout << "(1) Cocktails anzeigen" << endl;
         cout << "(2) Cocktail auswählen" << endl;
@@ -102,11 +103,14 @@ void GUI::cocktailAuswahl(){
     string eingabe;
     int zahl = 0;
     while(!zahl){
-        cout << "Bitte Cocktail auswählen: ";
+        cout << "Bitte Cocktail auswählen (0 für Abbruch): ";
         getline(cin, eingabe);
         zahl = atoi(eingabe.c_str());
         if(0 < zahl && zahl < m_Rezepte->getAnzahlRezepte()){
             m_Rezeptur_Prozessor->bereite_zu(m_Rezepte->getRezept(zahl-1));
+        }
+        else if(zahl == 0){
+            zahl = 1;
         }
         else{
             cout << "Falsche Eingabe! Bitte erneut eignaben" << endl;

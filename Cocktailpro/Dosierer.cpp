@@ -33,9 +33,10 @@ std::string Dosierer::getZutat() const
  */
 void Dosierer::update()
 {
+    subject->showGewicht();
     if(subject->getDeltaGewicht() >= Durchfluss){
         setZustand(false);
-        cout << "Ventil von Dosierer " << getZutat() << " geschlossen" << endl;
+        cout << "Ventil von Dosierer \"" << getZutat() << "\" geschlossen.";
     };
 }
 
@@ -68,18 +69,17 @@ void Dosierer::dosieren(float menge){
     subject->setDeltaGewicht(0);
     subject->attach(this);
     setZustand(true);
-    cout << "Ventil von Dosierer " << getZutat() << " geöffnet" << endl;
+    cout << endl << "Ventil von Dosierer \"" << getZutat() << "\" geöffnet." << endl;
+    subject->showGewicht();
     while(getZustand()){
         if(!getTyp()){
             //Stückdosierer
             if(getZutat() == "Limettenstücke"){
-                cout << "Es werden 10g Limettenstücke dosiert" << endl;
                 subject->addGewicht(10);
                 subject->notify();
                 subject->getZeit()->sleep(1000);
             }
             else{
-                cout << "Es werden 20g Eis dosiert" << endl;
                 subject->addGewicht(20);
                 subject->notify();
                 subject->getZeit()->sleep(1000);
@@ -87,10 +87,9 @@ void Dosierer::dosieren(float menge){
         }
         else{
             //normaler Dosierer
-                cout << "Es wird 1g " << getZutat() << " dosiert" << endl;
-                subject->addGewicht(1);
-                subject->notify();
-                subject->getZeit()->sleep(250);
+            subject->addGewicht(1);
+            subject->notify();
+            subject->getZeit()->sleep(250);
         }
     }
     subject->detach(this);

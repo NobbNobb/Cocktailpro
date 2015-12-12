@@ -24,7 +24,13 @@ Entleerer::~Entleerer(){
  * */
 void Entleerer::reinigen()
 {
-	
+    cout << endl << "Cocktailbehälter wird gereinigt. Bitte warten: ";
+    for(int i = 0; i < 10; i++){
+        cout << "*";
+        cout.flush();
+        subject->getZeit()->sleep(1000);
+    }
+    cout << endl;
 }
 
 /**
@@ -35,9 +41,9 @@ void Entleerer::leeren()
     subject->setDeltaGewicht(subject->getGewicht());
     subject->attach(this);
     setZustand(true);
-    cout << "Entleerventil geöffnet" << endl;
+    cout << endl << "Entleerventil geöffnet." << endl;
+    subject->showGewicht();
     while(getZustand()){
-        cout << "Es werden 25g des Cocktails entleert" << endl;
         subject->addGewicht(-25);
         subject->notify();
         subject->getZeit()->sleep(1000);
@@ -51,9 +57,10 @@ void Entleerer::leeren()
  */
 void Entleerer::update()
 {
-	if(subject->getDeltaGewicht() <= 0){
+    subject->showGewicht();
+    if(subject->getDeltaGewicht() <= 0){
         setZustand(false);
-        cout << "Entleerventil geschlossen" << endl;
+        cout << "Entleerventil geschlossen." << endl;
     };
 }
 
