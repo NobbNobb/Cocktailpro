@@ -32,11 +32,11 @@ void Entleerer::setZustand(bool zustand){
 
 /*-----------------------Funktionen-----------------------*/
 
-void Entleerer::reinigen(){
+void Entleerer::reinigen() const{
     cout << endl << "Cocktailbehälter wird gereinigt. Bitte warten: ";
     for(int i = 0; i < 10; i++){
         cout << "*";
-        cout.flush();                           //Output erzwingen
+        cout.flush();                             //Output erzwingen
         m_Subject->getZeit()->sleep(1000);        //Eine Sekunde warten
     }
     cout << endl;

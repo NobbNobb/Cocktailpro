@@ -62,7 +62,7 @@ class Entleerer: public Observer
 	/**
 	 * reinigt den Cocktailbehälter in 10 Sekunden
 	 * */
-	void reinigen();
+	void reinigen() const;
 
 	/**
 	 * Funktion zur Aktuallisierung nach Änderung beim zu beobachtenden Objektes
