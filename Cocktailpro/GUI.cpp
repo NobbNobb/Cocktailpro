@@ -74,10 +74,10 @@ void GUI::menue(){
 
 void GUI::cocktailAuswahl() const{
     int eingabe = 0;
-    while(!eingabe){
-        cout << "Bitte Cocktail auswählen (0 für Abbruch): ";                       
+    cout << "Bitte Cocktail auswählen (0 für Abbruch): ";   
+    while(!eingabe){                    
         while(!(cin >> eingabe)){                                               //Eingabe auf Falscheingabe prüfen
-            cout << "Falsche Eingabe! Bitte ernaut eingeben: ";                 
+            cout << "Falsche Eingabe! Bitte ernaut eingeben (0 für Abbruch): ";                 
             cin.clear();                                                        //Löschen von error flags
             cin.ignore(std::numeric_limits<int>::max(),'\n');                   //Bis zur nächsten newline überspringen
         }
@@ -92,7 +92,7 @@ void GUI::cocktailAuswahl() const{
             cin.ignore(std::numeric_limits<int>::max(),'\n');                   //Bis zur nächsten newline überspringen
         }
         else{
-            cout << "Falsche Eingabe! Bitte erneut eingben" << endl;
+            cout << "Falsche Eingabe! Bitte erneut eingeben (0 für Abbruch): ";
             eingabe = 0;                                                        //Abbruchsbedingung nicht setzen
             cin.clear();                                                        //Löschen von error flags
             cin.ignore(std::numeric_limits<int>::max(),'\n');                   //Bis zur nächsten newline überspringen
