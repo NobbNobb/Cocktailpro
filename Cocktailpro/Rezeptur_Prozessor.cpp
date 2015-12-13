@@ -12,7 +12,7 @@ Rezeptur_Prozessor::Rezeptur_Prozessor(Dosierer_Verwaltung *dVerwaltung){
     Stampfer* stampfer = new Stampfer(zeit);
     Mischer* mischer = new Mischer(zeit);
     Waage* waage = new Waage(zeit);
-    Entleerer* entleerer = new Entleerer(waage, zeit);
+    Entleerer* entleerer = new Entleerer(waage);
     
     //Speichern aller benötigten Objekte
     m_Zeit = zeit;

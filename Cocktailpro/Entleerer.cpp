@@ -5,9 +5,8 @@
 
 #include "Entleerer.h"
 
-Entleerer::Entleerer(Waage *waage, Zeit* zeit){
+Entleerer::Entleerer(Waage *waage){
     m_Subject = waage;
-    m_Zeit = zeit;
     m_Zustand = false;
 }
 
@@ -18,10 +17,6 @@ Entleerer::~Entleerer(){
 
 bool Entleerer::getZustand() const{
     return m_Zustand;
-}
-
-Zeit* Entleerer::getZeit() const{
-    return m_Zeit;
 }
 
 /*-----------------------Setter-----------------------*/

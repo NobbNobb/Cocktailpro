@@ -5,11 +5,11 @@
 #ifndef GEFILLTERTES_REZEPTBUCH_H_H
 #define GEFILLTERTES_REZEPTBUCH_H_H
 
-#include "string.h"
 #include "Dosierer_Verwaltung.h"
 #include "Rezeptbuch.h"
 #include "Rezeptur_Prozessor.h"
 #include <vector>
+#include <string>
 
 using namespace std;
 

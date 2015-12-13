@@ -35,10 +35,6 @@ void Waage::setDeltaGewicht(float deltaGewicht){
     m_DeltaGewicht = deltaGewicht;
 }
 
-void Waage::setGewicht(float gewicht){
-    m_Gewicht = gewicht;
-}
-
 /*-----------------------Funktionen-----------------------*/
 
 void Waage::addGewicht(float gewicht){

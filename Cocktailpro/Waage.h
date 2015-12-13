@@ -55,13 +55,7 @@ class Waage: public Subject{
          * @param deltaGewicht Betrag des Gewischtes
          */
 	void setDeltaGewicht(float deltaGewicht);
-	
-        /**
-         * setzt das Gewicht
-         * @param gewicht Betrag des Gewichtes
-         */
-	void setGewicht(float gewicht);
-	
+
         /*-----------------------Funktionen-----------------------*/
         
 	/**

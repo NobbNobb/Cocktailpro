@@ -11,8 +11,11 @@
 #include "Waage.h"
 #include "Zeit.h"
 #include "Dosierer_Verwaltung.h"
-#include "string.h"
 #include "Gefilltertes_Rezeptbuch.h"
+#include <string>
+
+using namespace std;
+        
 /**
  * Führt falls notwendig koordinierende Tätigkeiten aus. Dient als Schnittstelle zwischen Rezeptbuch und dem Cocktailmischer
  * */

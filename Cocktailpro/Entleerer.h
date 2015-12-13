@@ -23,7 +23,7 @@ class Entleerer: public Observer
          * @param waage Waagen-Objekt zum beobachten
          * @param zeit  Zeit-Objekt zum warten
          */
-        Entleerer(Waage *waage, Zeit* zeit);
+        Entleerer(Waage *waage);
         
         /**
          * Standarddestruktor
@@ -37,12 +37,6 @@ class Entleerer: public Observer
          * @return false oder true (geschlossen oder geöffnet)
          */
 	bool getZustand() const;
-        
-        /**
-         * gibt das Zeit-Objekt zurück
-         * @return pointer auf das Zeit-Objekt
-         */
-        Zeit* getZeit() const;
         
         /*-----------------------Setter-----------------------*/
         
@@ -80,11 +74,6 @@ class Entleerer: public Observer
 	 * Zustand ob das Ventil geöffnet ist (true = offen, false = geschlossen)
 	 */
 	bool m_Zustand;
-        
-        /**
-         * Zeit-Objekt zum warten
-         */
-        Zeit* m_Zeit;
 };
 
 #endif
