@@ -45,8 +45,6 @@ void Entleerer::leeren(){
     m_Subject->showGewicht();                          //Gewicht ausgeben
     while(getZustand()){                             //Prüfen ob das Ventil offen ist
         m_Subject->addGewicht(-25);                    //negatives Gewicht hinzufügen (subGewicht))
-        m_Subject->notify();                           //Alle Observer benachrichtigen
-        m_Subject->getZeit()->sleep(1000);             //Eine Sekunde warten
     }
     m_Subject->detach(this);                           //Observer abmelden
 }

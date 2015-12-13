@@ -40,6 +40,13 @@ void Waage::setDeltaGewicht(float deltaGewicht){
 void Waage::addGewicht(float gewicht){
     m_DeltaGewicht += gewicht;          //Gewicht auf das Delta-Gewicht addieren
     m_Gewicht += gewicht;               //Gewicht auf das Absolut-Gewicht addieren
+    if(gewicht == 1){
+        m_Zeit->sleep(250);             //0.25 Sekunde warten
+    }
+    else{
+        m_Zeit->sleep(1000);            //Eine Sekunde warten
+    }
+    notify();                           //Alle Observer benachrichtigen
 }
 
 void Waage::showGewicht(){
@@ -49,5 +56,5 @@ void Waage::showGewicht(){
     if(m_Gewicht < 0){                  //Prüfen ob das Absolut-Gewicht negativ ist
         m_Gewicht = 0;                  //Absolut-Gewicht auf "0" setzen
     }
-    cout << "Absolute: " << m_Gewicht << "g | Delta: " << m_DeltaGewicht << "g" << endl; //Ausgabe beider Gewichtsvariablen
+    cout << "Absolut: " << m_Gewicht << "g | Delta: " << m_DeltaGewicht << "g" << endl; //Ausgabe beider Gewichtsvariablen
 }

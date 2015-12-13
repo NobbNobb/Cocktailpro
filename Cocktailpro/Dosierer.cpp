@@ -57,24 +57,17 @@ void Dosierer::dosieren(float menge){
             //Stückdosierer
             if(getZutat() == "Limettenstücke"){
                 m_Subject->addGewicht(10);           //Gewicht hinzufügen
-                m_Subject->notify();                 //Alle Observer benachrichtigen
-                m_Subject->getZeit()->sleep(1000);   //Eine Sekunde warten
             }
             else{
                 m_Subject->addGewicht(20);           //Gewicht hinzufügen
-                m_Subject->notify();                 //Alle Observer benachrichtigen
-                m_Subject->getZeit()->sleep(1000);   //Eine Sekunde warten
             }
         }
         else{
             //normaler Dosierer
             m_Subject->addGewicht(1);                //Gewicht hinzufügen
-            m_Subject->notify();                     //Alle Observer benachrichtigen
-            m_Subject->getZeit()->sleep(250);        //0.25 Sekunden warten
         }
     }
     m_Subject->detach(this);             //Observer abmelden
-    setDurchfluss(0);                    //Zu dosierende Menge wieder zurücksetzen
     cout << endl;
 }
 

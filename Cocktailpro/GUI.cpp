@@ -81,7 +81,7 @@ void GUI::cocktailAuswahl() const{
             cin.clear();                                                        //Löschen von error flags
             cin.ignore(std::numeric_limits<int>::max(),'\n');                   //Bis zur nächsten newline überspringen
         }
-        if(0 < eingabe && eingabe < m_Rezepte->getAnzahlRezepte()){             //Prüfen ob die Eingabe im Zahlenbereich liegt
+        if(0 < eingabe && eingabe <= m_Rezepte->getAnzahlRezepte()){             //Prüfen ob die Eingabe im Zahlenbereich liegt
             m_Rezeptur_Prozessor->bereite_zu(m_Rezepte->getRezept(eingabe - 1));//Cocktail zubereiten
             cin.clear();                                                        //Löschen von error flags
             cin.ignore(std::numeric_limits<int>::max(),'\n');                   //Bis zur nächsten newline überspringen
