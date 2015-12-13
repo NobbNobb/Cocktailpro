@@ -35,7 +35,7 @@ void Dosierer_Verwaltung::dateiLaden(){
     while(!load.eof()){                                    
         getline(load, word);                               //Zutat aus dem filestream holen
         m_Zutaten.push_back(word);                         //Zutat in den Vektor schieben
-        if(word == "Limettenstücke" || word == "Eis"){     //Prüfen ob die Zutat "Limettenstücke" oder "Eis" ist 
+        if(word == "Limettenstuecke" || word == "Eis"){     //Prüfen ob die Zutat "Limettenstücke" oder "Eis" ist 
             Dosierer* dosierer = new Dosierer(word, false);//Dosierer-Objekt erstellen 
             m_Dosierer.push_back(dosierer);                //Dosierer in den Vektor schieben 
         }
