@@ -55,7 +55,7 @@ void Dosierer::dosieren(float menge){
     while(getZustand()){                 //Prüfen ob das Ventil offen ist
         if(!getTyp()){                   //Prüfen welche Art von Dosierer vohanden ist
             //Stückdosierer
-            if(getZutat() == "Limettenstücke"){
+            if(getZutat() == "Limettenstuecke"){
                 m_Subject->addGewicht(10);           //Gewicht hinzufügen
             }
             else{
@@ -73,7 +73,11 @@ void Dosierer::dosieren(float menge){
 
 void Dosierer::update(){
     m_Subject->showGewicht();                           //Gewicht ausgeben
-    if(m_Subject->getDeltaGewicht() >= m_Durchfluss){   //Prüfen ob die zu dosierende Menge erreicht wurde
+    float temp = m_Subject->getDeltaGewicht();          // Für Stückdosierer
+    if(m_Zutat == "Limettenstuecke"){
+        temp = temp / 10;
+    }
+    if(temp >= m_Durchfluss){   //Prüfen ob die zu dosierende Menge erreicht wurde
         setZustand(false);                              //Ventil schließen
         cout << "Ventil von Dosierer \"" << getZutat() << "\" geschlossen.";
     };
