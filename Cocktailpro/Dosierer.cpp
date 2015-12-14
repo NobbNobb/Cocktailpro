@@ -51,7 +51,6 @@ void Dosierer::dosieren(float menge){
     m_Subject->attach(this);             //Observer anmelden
     setZustand(true);                    //Ventil öffnen
     cout << endl << "Ventil von Dosierer \"" << getZutat() << "\" geöffnet." << endl;
-    m_Subject->showGewicht();            //Gewicht ausgeben
     while(getZustand()){                 //Prüfen ob das Ventil offen ist
         if(!getTyp()){                   //Prüfen welche Art von Dosierer vohanden ist
             //Stückdosierer

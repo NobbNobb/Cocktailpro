@@ -38,20 +38,19 @@ void Entleerer::reinigen() const{
 }
 
 void Entleerer::leeren(){
-    m_Subject->setDeltaGewicht(m_Subject->getGewicht()); //DeltaGewicht auf Gewicht setzen
+    m_Subject->setDeltaGewicht(0); //DeltaGewicht auf Gewicht setzen
     m_Subject->attach(this);                           //Observer anmelden
     setZustand(true);                                //Ventil öffnen
     cout << endl << "Entleerventil geöffnet." << endl;
-    m_Subject->showGewicht();                          //Gewicht ausgeben
     while(getZustand()){                             //Prüfen ob das Ventil offen ist
-        m_Subject->addGewicht(-25);                    //negatives Gewicht hinzufügen (subGewicht))
+        m_Subject->subGewicht(25);                    //negatives Gewicht hinzufügen (subGewicht))
     }
     m_Subject->detach(this);                           //Observer abmelden
 }
 
 void Entleerer::update(){
     m_Subject->showGewicht();                          //Gewicht ausgeben
-    if(m_Subject->getDeltaGewicht() <= 0){             //Prüfen ob der Behälter leer ist
+    if(m_Subject->getGewicht() <= 0){             //Prüfen ob der Behälter leer ist
         setZustand(false);                           //Ventil schliesen
         cout << "Entleerventil geschlossen." << endl;
     };

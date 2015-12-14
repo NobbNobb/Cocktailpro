@@ -65,6 +65,12 @@ class Waage: public Subject{
 	void addGewicht(float Gewicht);
         
         /**
+         * zieht der Waage Gewicht ab
+         * @param Gewicht Betrag des Gewichtes
+         */
+        void subGewicht(float Gewicht);
+        
+        /**
          * zeigt das Absolute- und Differenzgewicht an
          */
         void showGewicht();

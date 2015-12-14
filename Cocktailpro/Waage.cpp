@@ -49,6 +49,12 @@ void Waage::addGewicht(float gewicht){
     notify();                           //Alle Observer benachrichtigen
 }
 
+void Waage::subGewicht(float gewicht){
+    m_Gewicht -= gewicht;               //Gewicht von dem Absolut-Gewicht subtrahieren
+    m_Zeit->sleep(1000);                //Eine Sekunde wareten
+    notify();                           //Alle Observer benachrichtigen
+}
+
 void Waage::showGewicht(){
     if(m_DeltaGewicht < 0){             //Prüfen ob das Delta-Gewicht negativ ist
         m_DeltaGewicht = 0;             //Delta-Gewicht auf "0" setzen
